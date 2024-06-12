@@ -14,13 +14,14 @@ services:
     ports:
       - '0.0.0.0:13000:13000'
     volumes:
-      - ./packages/aigotools/.env:/app/.env
+      - ./packages/crawler/.env:/app/.env
 
   mongo:
     image: mongo:latest
     container_name: aigotools-mongo
+    ports:
+      - '27017:27017'
     volumes:
-      - './volumes/mongo/configdb:/data/configdb'
       - './volumes/mongo/data:/data/db'
     command: mongod --auth
     environment:
@@ -31,6 +32,8 @@ services:
     image: redis:latest
     container_name: aigotools-redis
     command: [ 'redis-server', '--requirepass', 'aigotools123456' ]
+    ports:
+      - '6379:6379'
     volumes:
       - './volumes/redis/redis.conf:/etc/redis/redis.conf'
       - './volumes/redis/data:/data'
