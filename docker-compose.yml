@@ -22,7 +22,7 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - './volumes/mongo/data:/data/db'
+      - './.volumes/mongo/data:/data/db'
     command: mongod --auth
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
@@ -35,8 +35,8 @@ services:
     ports:
       - '6379:6379'
     volumes:
-      - './volumes/redis/redis.conf:/etc/redis/redis.conf'
-      - './volumes/redis/data:/data'
+      - './.volumes/redis/redis.conf:/etc/redis/redis.conf'
+      - './.volumes/redis/data:/data'
 
   minio:
     image: 'quay.io/minio/minio:RELEASE.2023-08-31T15-31-16Z'
@@ -45,8 +45,8 @@ services:
       - '9000:9000'
       - '9001:9001'
     volumes:
-      - './volumes/minio/data1:/data1'
-      - './volumes/minio/data2:/data2'
+      - './.volumes/minio/data1:/data1'
+      - './.volumes/minio/data2:/data2'
     command: server --console-address ":9001" http://minio/data{1...2}
     environment:
       - MINIO_ROOT_USER=root
