@@ -1,0 +1,27 @@
+{
+  "editor.fontSize": 16,
+  "window.zoomLevel": 1,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.guides.bracketPairs": "active",
+  "files.autoSave": "afterDelay",
+  "git.confirmSync": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "css.lint.propertyIgnoredDueToDisplay": "ignore",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "files.associations": {
+    "editor.snippetSuggestions": "top"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "aigotools",
+  "version": "0.1.0",
+  "description": "aigotools",
+  "keywords": [
+    "aigotools"
+  ],
+  "homepage": "https://aigotools.com",
+  "author": "someu <someuxyz@gmail.com>",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.20.2",
+    "pnpm": ">=8.15.6",
+    "yarn": "please-use-pnpm",
+    "npm": "please-use-pnpm"
+  }
+}
