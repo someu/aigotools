@@ -1,0 +1,15 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.git
+.vscode
+.dist
+docs
+logs
+test
+.next
+.env*.local
+.env*.prod
+.env*.dev

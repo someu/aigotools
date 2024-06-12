@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --transition-duration: 0.3s;
+  }
+
+  html {
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+  }
+}

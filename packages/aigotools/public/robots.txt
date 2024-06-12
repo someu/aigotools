@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://uglyavatar.online
+
+# Sitemaps
+Sitemap: https://uglyavatar.online/sitemap.xml

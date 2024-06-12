@@ -1,0 +1,82 @@
+"use client";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { toast } from "react-toastify";
+import { Button, Spinner } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
+import { useSearchParams } from "next/navigation";
+import { TicketPlus } from "lucide-react";
+import { useEffect } from "react";
+
+import Search from "@/components/index/search";
+import { searchSites } from "@/lib/actions";
+import SiteGroup from "@/components/common/sites-group";
+import { Site } from "@/models/site";
+
+import EmptyImage from "./empty-image";
+
+export default function InfiniteSearch() {
+  const searchParams = useSearchParams();
+  const search = decodeURIComponent(searchParams.get("s") || "");
+  const t = useTranslations("search");
+
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetching,
+    isFetchingNextPage,
+    refetch,
+  } = useInfiniteQuery({
+    queryKey: ["search-sites"],
+    queryFn: async ({ pageParam }) => {
+      return await searchSites(search, pageParam);
+    },
+    initialPageParam: 1,
+    getNextPageParam: (lastPage) => {
+      if (lastPage.hasNext) {
+        return lastPage.page + 1;
+      }
+    },
+    throwOnError(error) {
+      console.log(error);
+      toast.error("loadFailed");
+
+      return false;
+    },
+    refetchOnWindowFocus: false,
+  });
+
+  useEffect(() => {
+    refetch({});
+  }, [search, refetch]);
+
+  const sites =
+    data?.pages.reduce((t, c) => t.concat(c.sites), [] as Site[]) || [];
+
+  return (
+    <>
+      <Search className="sm:mt-12" defaultSearch={search} />
+      <SiteGroup sites={sites} title={t("result")} />
+      <div className="flex justify-center mt-8">
+        {isFetching || isFetchingNextPage ? (
+          <Spinner className="my-20" />
+        ) : hasNextPage ? (
+          <Button
+            className="font-semibold"
+            color="primary"
+            size="sm"
+            startContent={<TicketPlus size={16} />}
+            onClick={() => fetchNextPage()}
+          >
+            {t("loadMore")}
+          </Button>
+        ) : (
+          <div className="text-center my-16">
+            <EmptyImage className="dark:invert" />
+            <div className="mt-6 font-medium">{t("empty")}</div>
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
