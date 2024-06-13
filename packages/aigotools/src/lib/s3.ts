@@ -9,10 +9,10 @@ import { v4 } from "uuid";
 import { AppConfig } from "./config";
 
 const s3 = new S3Client({
-  region: AppConfig.awsRegion,
+  region: AppConfig.s3Region,
   credentials: {
-    accessKeyId: AppConfig.awsAccessKey as string,
-    secretAccessKey: AppConfig.awsSecert as string,
+    accessKeyId: AppConfig.s3AccessKey as string,
+    secretAccessKey: AppConfig.s3Secert as string,
   },
 });
 
@@ -23,7 +23,7 @@ export async function uploadBufferToS3(
   const subfix = contentType.split("/").pop();
   const fileKey = subfix ? `${v4()}.${subfix}` : v4();
   const params: PutObjectCommandInput = {
-    Bucket: AppConfig.awsBucket,
+    Bucket: AppConfig.s3Bucket,
     Key: fileKey,
     Body: buffer,
     ContentType: contentType,
@@ -34,7 +34,7 @@ export async function uploadBufferToS3(
   try {
     await s3.send(command);
 
-    return `${AppConfig.awsBase}/${fileKey}`;
+    return `${AppConfig.s3Base}/${fileKey}`;
   } catch (error) {
     console.error("Error uploading file to S3:", error);
     throw new Error("Failed to upload file to S3");

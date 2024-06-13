@@ -14,10 +14,7 @@ export const AppConfig = {
   // mongo
   mongoUri: process.env.MONGODB_URI as string,
   // image storage
-  imageStorage: process.env.NEXT_PUBLIC_IMAGE_STORAGE as
-    | "minio"
-    | "aws"
-    | "tencent",
+  imageStorage: process.env.NEXT_PUBLIC_IMAGE_STORAGE as "minio" | "s3" | "cos",
 
   // minio
   minioBase: process.env.MINIO_BASE as string,
@@ -28,11 +25,11 @@ export const AppConfig = {
   minioAccessKey: process.env.MINIO_ACCESS_KEY as string,
   minioSecretKey: process.env.MINIO_SECERT_KEY as string,
   // aws s3
-  awsBase: process.env.AWS_BASE as string,
-  awsRegion: process.env.AWS_REGION as string,
-  awsBucket: process.env.AWS_BUCKET as string,
-  awsAccessKey: process.env.AWS_ACCESS_KEY_ID as string,
-  awsSecert: process.env.AWS_ACCESS_SECERT as string,
+  s3Base: process.env.S3_BASE as string,
+  s3Region: process.env.S3_REGION as string,
+  s3Bucket: process.env.S3_BUCKET as string,
+  s3AccessKey: process.env.S3_ACCESS_KEY_ID as string,
+  s3Secert: process.env.S3_ACCESS_SECERT as string,
   // tencent cos
   cosBase: process.env.COS_BASE as string,
   cosRegion: process.env.COS_REGION as string,
