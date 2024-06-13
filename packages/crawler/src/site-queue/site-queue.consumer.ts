@@ -59,12 +59,12 @@ export class SiteConsumer {
 
     const imageStorage = this.configService.get('IMAGE_STORAGE') as
       | 'minio'
-      | 'aws'
-      | 'tencent';
+      | 's3'
+      | 'cos';
     const contentType = 'image/webp';
 
     let snapshot = '';
-    if (imageStorage === 'aws') {
+    if (imageStorage === 's3') {
       snapshot = await this.s3Service.uploadBufferToS3(
         resizedSnapshot,
         contentType,
@@ -74,7 +74,7 @@ export class SiteConsumer {
         resizedSnapshot,
         contentType,
       );
-    } else if (imageStorage === 'tencent') {
+    } else if (imageStorage === 'cos') {
       snapshot = await this.cosService.uploadBufferToCOS(
         resizedSnapshot,
         contentType,

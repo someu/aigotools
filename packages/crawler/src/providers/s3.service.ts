@@ -12,10 +12,10 @@ export class S3Service {
   s3: S3Client;
   constructor(private configService: ConfigService) {
     this.s3 = new S3Client({
-      region: configService.get('AWS_REGION'),
+      region: configService.get('S3_REGION'),
       credentials: {
-        accessKeyId: configService.get('AWS_ACCESS_KEY_ID'),
-        secretAccessKey: configService.get('AWS_ACCESS_SECERT'),
+        accessKeyId: configService.get('S3_ACCESS_KEY_ID'),
+        secretAccessKey: configService.get('S3_ACCESS_SECERT'),
       },
     });
   }
@@ -28,7 +28,7 @@ export class S3Service {
     const subfix = contentType.split('/').pop();
     const fileKey = subfix ? `${v4()}.${subfix}` : v4();
     const params: PutObjectCommandInput = {
-      Bucket: this.configService.get('AWS_BUCKET'),
+      Bucket: this.configService.get('S3_BUCKET'),
       Key: fileKey,
       Body: buffer,
       ContentType: contentType,
@@ -40,7 +40,7 @@ export class S3Service {
     try {
       await this.s3.send(command);
 
-      return `${this.configService.get('AWS_BASE')}${fileKey}`;
+      return `${this.configService.get('S3_BASE')}${fileKey}`;
     } catch (error) {
       Logger.error('Error uploading file to S3', error);
       throw error;

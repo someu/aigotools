@@ -40,11 +40,11 @@ export default function ImageUpload({
           const res = await uploadFormDataToMinio(formData);
 
           onChange(res[0]);
-        } else if (AppConfig.imageStorage === "aws") {
+        } else if (AppConfig.imageStorage === "s3") {
           const res = await uploadFormDataToS3(formData);
 
           onChange(res[0]);
-        } else if (AppConfig.imageStorage === "tencent") {
+        } else if (AppConfig.imageStorage === "cos") {
           const res = await uploadFormDataToCos(formData);
 
           onChange(res[0]);
