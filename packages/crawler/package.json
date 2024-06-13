@@ -28,7 +28,6 @@
     "@nestjs/config": "^3.2.2",
     "@nestjs/core": "^10.0.0",
     "@nestjs/mongoose": "^10.0.6",
-    "@nestjs/platform-express": "^10.3.9",
     "@nestjs/throttler": "^5.1.2",
     "axios": "^1.7.0",
     "bull": "^4.12.2",
