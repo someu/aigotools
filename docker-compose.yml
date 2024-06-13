@@ -6,7 +6,7 @@ services:
     ports:
       - '0.0.0.0:3000:3000'
     volumes:
-      - ./packages/aigotools/.env:/app/.env
+      - ./packages/aigotools/.env.prod:/app/.env
 
   crawler:
     container_name: crawler
@@ -14,7 +14,7 @@ services:
     ports:
       - '0.0.0.0:13000:13000'
     volumes:
-      - ./packages/crawler/.env:/app/.env
+      - ./packages/crawler/.env.prod:/app/.env
 
   mongo:
     image: mongo:latest

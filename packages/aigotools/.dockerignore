@@ -10,6 +10,3 @@ docs
 logs
 test
 .next
-.env*.local
-.env*.prod
-.env*.dev

@@ -39,7 +39,7 @@ import { SiteQueueModule } from './site-queue/site-queue.module';
       inject: [ConfigService],
     }),
     BullBoardModule.forRootAsync({
-      useFactory(...args) {
+      useFactory() {
         return {
           route: '/queues',
           adapter: ExpressAdapter,
