@@ -40,7 +40,7 @@ export class S3Service {
     try {
       await this.s3.send(command);
 
-      return `${this.configService.get('S3_BASE')}${fileKey}`;
+      return `${this.configService.get('S3_BASE')}/${fileKey}`;
     } catch (error) {
       Logger.error('Error uploading file to S3', error);
       throw error;

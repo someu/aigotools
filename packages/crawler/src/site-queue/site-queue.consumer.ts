@@ -1,28 +1,29 @@
-import { OnQueueFailed, Process, Processor } from '@nestjs/bull';
+import { InjectQueue, OnQueueFailed, Process, Processor } from '@nestjs/bull';
 import { Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { InjectModel } from '@nestjs/mongoose';
 import axios, { AxiosError } from 'axios';
-import { Job } from 'bull';
+import { Job, Queue } from 'bull';
 import * as _ from 'lodash';
 import { Model } from 'mongoose';
 import OpenAI from 'openai';
 import * as sharp from 'sharp';
 import { PromptOutput, SiteSummaryPrompt } from '../prompts/site-summary';
 import { BrowserService } from '../providers/browser.service';
+import { COSService } from '../providers/cos.service';
+import { MinioService } from '../providers/minio.service';
+import { RedisService } from '../providers/redis.service';
 import { S3Service } from '../providers/s3.service';
+import { Category } from '../schemas/category.schema';
 import { ProcessStage, Site, SiteDocument } from '../schemas/site.schema';
 import { SITE_CRAWL_JOB, SITE_QUEUE_NAME } from './site-queue.constant';
-import { Category } from '../schemas/category.schema';
-import { RedisService } from '../providers/redis.service';
-import { MinioService } from '../providers/minio.service';
-import { COSService } from '../providers/cos.service';
 
 @Processor(SITE_QUEUE_NAME)
 export class SiteConsumer {
   constructor(
     @InjectModel(Site.name) private siteModel: Model<Site>,
     @InjectModel(Category.name) private categoryModel: Model<Category>,
+    @InjectQueue(SITE_QUEUE_NAME) private siteQueue: Queue,
 
     private browserService: BrowserService,
     private s3Service: S3Service,
@@ -135,6 +136,14 @@ export class SiteConsumer {
     const content = siteContentRes.data.data.content;
     await this.redisService.redisClient.setex(cacheKey, 600, content);
     return content;
+  }
+
+  private async assertJobActive(job: Job) {
+    const currentJob = await this.siteQueue.getJob(job.id);
+    if (!currentJob.isActive()) {
+      Logger.error(`Job ${job.id} is not active`);
+      throw new Error(`Job ${job.id} is not active`);
+    }
   }
 
   private async summarySiteContent(site: Site) {
@@ -268,6 +277,7 @@ export class SiteConsumer {
       }
       throw error;
     } finally {
+      await this.assertJobActive(job);
       if (site) {
         site.updatedAt = Date.now();
         await site?.save();

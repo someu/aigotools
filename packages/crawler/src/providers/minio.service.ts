@@ -7,6 +7,7 @@ import { ConfigService } from '@nestjs/config';
 export class MinioService {
   private minioClient: Client;
   private bucket: string;
+  private bucketExist = false;
   constructor(private configService: ConfigService) {
     this.minioClient = new Client({
       endPoint: configService.get('MINIO_ENDPOINT'),
@@ -16,10 +17,12 @@ export class MinioService {
       secretKey: configService.get('MINIO_SECERT_KEY'),
     });
     this.bucket = configService.get('MINIO_BUCKET', 'aigotools');
-    this.ensureBucketExist();
   }
 
   async ensureBucketExist() {
+    if (this.bucketExist) {
+      return;
+    }
     const bucket = this.bucket;
     const exists = await this.minioClient.bucketExists(bucket);
     if (exists) {
@@ -28,9 +31,11 @@ export class MinioService {
       await this.minioClient.makeBucket(bucket);
       Logger.log(`Bucket ${bucket} created.`);
     }
+    this.bucketExist = true;
   }
 
   async uploadFile(buffer: Buffer, contentType: string) {
+    await this.ensureBucketExist();
     const subfix = contentType.split('/').pop();
     const fileKey = subfix ? `${v4()}.${subfix}` : v4();
 
@@ -44,16 +49,5 @@ export class MinioService {
       },
     );
     return `${this.configService.get('MINIO_BASE')}/${this.bucket}/${fileKey}`;
-  }
-
-  async getFileStream(filePath: string) {
-    const [stat, stream] = await Promise.all([
-      await this.minioClient.statObject(this.bucket, filePath),
-      await this.minioClient.getObject(this.bucket, filePath),
-    ]);
-    return {
-      stat,
-      stream,
-    };
   }
 }
