@@ -18,13 +18,13 @@ import { useCallback, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { useQuery } from "@tanstack/react-query";
 
+import LinksInput from "./links-input";
+
 import { Site } from "@/models/site";
 import ArrowInput from "@/components/common/arrow-input";
 import SingleImageUpload from "@/components/common/single-image-upload";
 import MultiImageUpload from "@/components/common/multi-image-upload";
 import { getAllCategories, saveSite } from "@/lib/actions";
-
-import LinksInput from "./links-input";
 
 export default function SiteEdit({
   site,
@@ -194,7 +194,7 @@ export default function SiteEdit({
               onSelectionChange={(value) => {
                 setValue(
                   "categories",
-                  Array.from(value).map((item) => item.toString()),
+                  Array.from(value).map((item) => item.toString())
                 );
               }}
             >

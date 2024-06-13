@@ -43,7 +43,7 @@ export class MinioService {
         'Content-Type': contentType,
       },
     );
-    return `${this.bucket}/${fileKey}`;
+    return `${this.configService.get('MINIO_BASE')}/${this.bucket}/${fileKey}`;
   }
 
   async getFileStream(filePath: string) {

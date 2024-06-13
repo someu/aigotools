@@ -33,6 +33,7 @@
     "axios": "^1.7.0",
     "bull": "^4.12.2",
     "cheerio": "1.0.0-rc.12",
+    "cos-nodejs-sdk-v5": "^2.14.1",
     "generic-pool": "^3.9.0",
     "ioredis": "^5.4.1",
     "lodash": "^4.17.21",

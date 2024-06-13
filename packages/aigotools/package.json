@@ -27,6 +27,8 @@
     "axios": "^1.7.2",
     "clsx": "~2.1.1",
     "cmdk": "^1.0.0",
+    "cos-js-sdk-v5": "^1.8.0",
+    "cos-nodejs-sdk-v5": "^2.14.1",
     "dayjs": "~1.11.11",
     "lodash": "^4.17.21",
     "lucide-react": "^0.378.0",

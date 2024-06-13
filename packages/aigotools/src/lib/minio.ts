@@ -38,7 +38,7 @@ export async function uploadBufferToMinio(
       }
     );
 
-    return `/${AppConfig.minioBucket}/${fileKey}`;
+    return `${AppConfig.minioBase}/${AppConfig.minioBucket}/${fileKey}`;
   } catch (error) {
     console.error("Failed to upload file to minio", error);
     throw new Error("Failed to upload file to minio");

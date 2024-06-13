@@ -34,7 +34,7 @@ export async function uploadBufferToS3(
   try {
     await s3.send(command);
 
-    return fileKey;
+    return `${AppConfig.awsBase}/${fileKey}`;
   } catch (error) {
     console.error("Error uploading file to S3:", error);
     throw new Error("Failed to upload file to S3");

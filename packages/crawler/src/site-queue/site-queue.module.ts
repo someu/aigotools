@@ -14,6 +14,7 @@ import { ConfigService } from '@nestjs/config';
 import { Category, CategorySchema } from '../schemas/category.schema';
 import { RedisService } from '../providers/redis.service';
 import { MinioService } from '../providers/minio.service';
+import { COSService } from '../providers/cos.service';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { MinioService } from '../providers/minio.service';
     ConfigService,
     RedisService,
     MinioService,
+    COSService,
   ],
   exports: [SiteQueueProducer],
 })
