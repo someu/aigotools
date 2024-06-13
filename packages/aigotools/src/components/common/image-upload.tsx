@@ -4,10 +4,12 @@ import { ChangeEvent, useCallback, useState } from "react";
 import { toast } from "react-toastify";
 import { useTranslations } from "next-intl";
 
-import { uploadFormDataToS3 } from "@/lib/s3";
-import { AppConfig } from "@/lib/config";
+import { uploadFormDataToMinio } from "../../lib/minio";
 
 import Loading from "./loading";
+
+import { uploadFormDataToS3 } from "@/lib/s3";
+import { AppConfig } from "@/lib/config";
 
 export default function ImageUpload({
   value,
@@ -33,9 +35,19 @@ export default function ImageUpload({
         const formData = new FormData();
 
         formData.append("files", file);
-        const res = await uploadFormDataToS3(formData);
+        if (AppConfig.imageStorage === "minio") {
+          const res = await uploadFormDataToMinio(formData);
 
-        onChange(res[0]);
+          onChange(res[0]);
+        } else if (AppConfig.imageStorage === "aws") {
+          const res = await uploadFormDataToS3(formData);
+
+          onChange(res[0]);
+        } else {
+          throw new Error(
+            `Unsuppored image storage: ${AppConfig.imageStorage}`
+          );
+        }
       } catch (error) {
         toast.error(t("uploadFailed"));
         console.log(error);
@@ -43,7 +55,7 @@ export default function ImageUpload({
         setUploading(false);
       }
     },
-    [onChange, t, uploading],
+    [onChange, t, uploading]
   );
 
   return value ? (
@@ -56,7 +68,7 @@ export default function ImageUpload({
           img: "w-full h-full object-fill",
         }}
         src={
-          value.startsWith("http") ? value : `${AppConfig.imageBase}/${value}`
+          value.startsWith("http") ? value : `${AppConfig.imageBase}${value}`
         }
       />
       <div className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] z-50">

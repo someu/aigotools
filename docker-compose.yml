@@ -39,15 +39,14 @@ services:
       - './.volumes/redis/data:/data'
 
   minio:
-    image: 'quay.io/minio/minio:RELEASE.2023-08-31T15-31-16Z'
+    image: quay.io/minio/minio
     container_name: aigotools-minio
     ports:
-      - '9000:9000'
-      - '9001:9001'
+      - '127.0.0.1:9000:9000'
+      - '127.0.0.1:9001:9001'
     volumes:
-      - './.volumes/minio/data1:/data1'
-      - './.volumes/minio/data2:/data2'
-    command: server --console-address ":9001" http://minio/data{1...2}
+      - './.volumes/minio/data:/data'
+    command: server /data --console-address ":9001"
     environment:
       - MINIO_ROOT_USER=root
       - MINIO_ROOT_PASSWORD=aigotools123456

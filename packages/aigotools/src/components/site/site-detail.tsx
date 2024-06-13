@@ -5,12 +5,12 @@ import { ExternalLink, Navigation } from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
 
-import { Site } from "@/models/site";
-import { AppConfig } from "@/lib/config";
-
 import VoteButton from "./vote-button";
 import ListItem from "./list-item";
 import SiteTags from "./site-tags";
+
+import { AppConfig } from "@/lib/config";
+import { Site } from "@/models/site";
 
 export default function SiteDetail({ site }: { site: Site }) {
   const t = useTranslations("site");
@@ -25,7 +25,7 @@ export default function SiteDetail({ site }: { site: Site }) {
         <h2
           className={clsx(
             "inline-flex relative gap-2 px-2 items-center justify-center text-center text-3xl leading-0 font-bold text-primary-800",
-            "after:content-[' '] after:overflow-hidden after:absolute after:-bottom-[1px] after:left-0 after:h-[2px] after:bg-primary-800 after:w-0 hover:after:w-full after:transition-width",
+            "after:content-[' '] after:overflow-hidden after:absolute after:-bottom-[1px] after:left-0 after:h-[2px] after:bg-primary-800 after:w-0 hover:after:w-full after:transition-width"
           )}
         >
           <span>{site.name}</span>
@@ -49,7 +49,7 @@ export default function SiteDetail({ site }: { site: Site }) {
             src={
               site.snapshot?.startsWith("http")
                 ? site.snapshot
-                : `${AppConfig.imageBase}/${site.snapshot}`
+                : `${AppConfig.imageBase}${site.snapshot}`
             }
           />
           <SiteTags site={site} />

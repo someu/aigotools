@@ -15,6 +15,7 @@ import { ProcessStage, Site, SiteDocument } from '../schemas/site.schema';
 import { SITE_CRAWL_JOB, SITE_QUEUE_NAME } from './site-queue.constant';
 import { Category } from '../schemas/category.schema';
 import { RedisService } from '../providers/redis.service';
+import { MinioService } from '../providers/minio.service';
 
 @Processor(SITE_QUEUE_NAME)
 export class SiteConsumer {
@@ -26,6 +27,7 @@ export class SiteConsumer {
     private s3Service: S3Service,
     private configService: ConfigService,
     private redisService: RedisService,
+    private minioService: MinioService,
   ) {}
 
   private async getUrlScreenshot(url: string) {
@@ -53,11 +55,28 @@ export class SiteConsumer {
       .resize(800, 450, { position: 'top' })
       .toBuffer();
 
-    const snapshot = await this.s3Service.uploadBufferToS3(
-      resizedSnapshot,
-      'image/webp',
-    );
-    Logger.log(`screenshopt ${url} success: ${snapshot}`);
+    const imageStorage = this.configService.get('IMAGE_STORAGE') as
+      | 'minio'
+      | 'aws'
+      | 'tencent';
+    const contentType = 'image/webp';
+
+    let snapshot = '';
+    if (imageStorage === 'aws') {
+      snapshot = await this.s3Service.uploadBufferToS3(
+        resizedSnapshot,
+        contentType,
+      );
+    } else if (imageStorage === 'minio') {
+      snapshot = await this.minioService.uploadFile(
+        resizedSnapshot,
+        contentType,
+      );
+    } else {
+      throw new Error(`Wrong image storage: ${imageStorage}`);
+    }
+
+    Logger.log(`Screenshopt ${url} success: ${snapshot}`);
     await this.redisService.redisClient.setex(
       cacheKey,
       600,

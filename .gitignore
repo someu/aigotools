@@ -1,3 +1,5 @@
 .volumes
+!.volumes/.gitkeep
+!.volumes/**/.gitkeep
 node_modules
 .DS_Store

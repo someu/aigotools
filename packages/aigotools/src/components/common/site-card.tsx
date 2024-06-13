@@ -29,7 +29,7 @@ export default function SiteCard({ site }: { site: Site }) {
         src={
           site.snapshot?.startsWith("http")
             ? site.snapshot
-            : `${AppConfig.imageBase}/${site.snapshot}`
+            : `${AppConfig.imageBase}${site.snapshot}`
         }
       />
       <div className="p-4">
@@ -37,7 +37,7 @@ export default function SiteCard({ site }: { site: Site }) {
           <div
             className={clsx(
               "flex items-center text-primary-800 font-semibold gap-2 relative",
-              "after:content-[' '] after:overflow-hidden after:absolute after:-bottom-[1px] after:left-0 after:h-[2px] after:bg-primary-900 after:w-0 group-hover:after:w-full after:transition-width",
+              "after:content-[' '] after:overflow-hidden after:absolute after:-bottom-[1px] after:left-0 after:h-[2px] after:bg-primary-900 after:w-0 group-hover:after:w-full after:transition-width"
             )}
           >
             <h3 className="text-lg">{site.name}</h3>
