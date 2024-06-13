@@ -30,7 +30,11 @@ export class BrowserService {
     create: async (): Promise<Browser> => {
       try {
         const browser = await chromium.launch({
-          args: ['--no-sandbox', '--disable-setuid-sandbox'],
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--ignore-certificate-errors',
+          ],
         });
         this.attachEventHandlers(browser);
         return browser;

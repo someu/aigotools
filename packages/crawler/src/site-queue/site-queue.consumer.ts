@@ -16,6 +16,7 @@ import { SITE_CRAWL_JOB, SITE_QUEUE_NAME } from './site-queue.constant';
 import { Category } from '../schemas/category.schema';
 import { RedisService } from '../providers/redis.service';
 import { MinioService } from '../providers/minio.service';
+import { COSService } from '../providers/cos.service';
 
 @Processor(SITE_QUEUE_NAME)
 export class SiteConsumer {
@@ -28,6 +29,7 @@ export class SiteConsumer {
     private configService: ConfigService,
     private redisService: RedisService,
     private minioService: MinioService,
+    private cosService: COSService,
   ) {}
 
   private async getUrlScreenshot(url: string) {
@@ -69,6 +71,11 @@ export class SiteConsumer {
       );
     } else if (imageStorage === 'minio') {
       snapshot = await this.minioService.uploadFile(
+        resizedSnapshot,
+        contentType,
+      );
+    } else if (imageStorage === 'tencent') {
+      snapshot = await this.cosService.uploadBufferToCOS(
         resizedSnapshot,
         contentType,
       );
@@ -239,7 +246,7 @@ export class SiteConsumer {
       site.usecases = _.get(summaried, 'usecases', site.usecases);
       site.pricingType = _.get(summaried, 'pricingType', site.pricingType);
       site.pricings = _.get(summaried, 'pricings', site.pricings);
-      site.links = _.get(summaried, 'links', site.links);
+      site.links = _.get(summaried, 'links', site.links) || {};
       site.metaKeywords = keywords.length
         ? keywords
         : _.get(summaried, 'keywords', site.metaKeywords);

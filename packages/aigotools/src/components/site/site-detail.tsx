@@ -9,7 +9,6 @@ import VoteButton from "./vote-button";
 import ListItem from "./list-item";
 import SiteTags from "./site-tags";
 
-import { AppConfig } from "@/lib/config";
 import { Site } from "@/models/site";
 
 export default function SiteDetail({ site }: { site: Site }) {
@@ -46,11 +45,7 @@ export default function SiteDetail({ site }: { site: Site }) {
               img: "w-full aspect-video object-fill",
             }}
             radius="sm"
-            src={
-              site.snapshot?.startsWith("http")
-                ? site.snapshot
-                : `${AppConfig.imageBase}${site.snapshot}`
-            }
+            src={site.snapshot}
           />
           <SiteTags site={site} />
         </div>

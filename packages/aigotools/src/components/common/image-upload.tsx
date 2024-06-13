@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { useTranslations } from "next-intl";
 
 import { uploadFormDataToMinio } from "../../lib/minio";
+import { uploadFormDataToCos } from "../../lib/cos";
 
 import Loading from "./loading";
 
@@ -43,6 +44,10 @@ export default function ImageUpload({
           const res = await uploadFormDataToS3(formData);
 
           onChange(res[0]);
+        } else if (AppConfig.imageStorage === "tencent") {
+          const res = await uploadFormDataToCos(formData);
+
+          onChange(res[0]);
         } else {
           throw new Error(
             `Unsuppored image storage: ${AppConfig.imageStorage}`
@@ -67,9 +72,7 @@ export default function ImageUpload({
           wrapper: "w-full h-full",
           img: "w-full h-full object-fill",
         }}
-        src={
-          value.startsWith("http") ? value : `${AppConfig.imageBase}${value}`
-        }
+        src={value}
       />
       <div className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] z-50">
         <div

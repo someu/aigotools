@@ -5,7 +5,6 @@ import { ExternalLink, ThumbsUpIcon } from "lucide-react";
 
 import { Site } from "@/models/site";
 import { useRouter } from "@/navigation";
-import { AppConfig } from "@/lib/config";
 
 export default function SiteCard({ site }: { site: Site }) {
   const router = useRouter();
@@ -26,11 +25,7 @@ export default function SiteCard({ site }: { site: Site }) {
           img: "w-full aspect-video object-fill",
         }}
         radius="none"
-        src={
-          site.snapshot?.startsWith("http")
-            ? site.snapshot
-            : `${AppConfig.imageBase}${site.snapshot}`
-        }
+        src={site.snapshot}
       />
       <div className="p-4">
         <div className="flex justify-between items-center">

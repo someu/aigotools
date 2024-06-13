@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { useTranslations } from "next-intl";
 
 export default function LinksInput({
-  value,
+  value = {},
   onChange,
 }: {
   value: Record<string, string>;
