@@ -10,6 +10,7 @@ import { AppService } from './app.service';
 import { BasicAuthMiddleware } from './middleware/basic-auth.middleware';
 import { Site, SiteSchema } from './schemas/site.schema';
 import { SiteQueueModule } from './site-queue/site-queue.module';
+import { MinioService } from './providers/minio.service';
 
 @Module({
   imports: [
@@ -65,7 +66,7 @@ import { SiteQueueModule } from './site-queue/site-queue.module';
     ]),
   ],
   controllers: [AppController],
-  providers: [AppService, ConfigService],
+  providers: [AppService, ConfigService, MinioService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {

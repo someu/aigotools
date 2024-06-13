@@ -4,15 +4,15 @@ WORKDIR /app
 
 FROM baserepo as builder
 COPY . .
-RUN npm install -g @nestjs/cli \
-  && npm install \
-  && npm run build
+RUN pnpm install -g pnpm @nestjs/cli \
+  && pnpm install \
+  && pnpm run build
 
 FROM baserepo
 RUN chown -R pwuser:pwuser /app
 USER pwuser
 COPY --from=builder --chown=pwuser:pwuser /app/package.json /app/package-lock.json /app/
-RUN npm install --production && npm exec playwright install chromium
+RUN pnpm install --production && pnpm exec playwright install chromium
 COPY --from=builder --chown=pwuser:pwuser /app/dist /app/dist
 EXPOSE 13000
-CMD npm run start:prod
+CMD pnpm run start:prod

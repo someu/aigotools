@@ -18,8 +18,7 @@ const s3 = new S3Client({
 
 export async function uploadBufferToS3(
   buffer: Buffer,
-  contentType: string,
-  metadata?: Record<string, string>,
+  contentType: string
 ): Promise<string> {
   const subfix = contentType.split("/").pop();
   const fileKey = subfix ? `${v4()}.${subfix}` : v4();
@@ -28,7 +27,6 @@ export async function uploadBufferToS3(
     Key: fileKey,
     Body: buffer,
     ContentType: contentType,
-    Metadata: metadata,
   };
 
   const command = new PutObjectCommand(params);
@@ -51,7 +49,7 @@ export async function uploadFormDataToS3(formData: FormData) {
       const buffer = (await file.arrayBuffer()) as Buffer;
 
       return uploadBufferToS3(buffer, file.type);
-    }),
+    })
   );
 
   return uploadRes;
