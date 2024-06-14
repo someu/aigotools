@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { Client } from 'minio';
 import { v4 } from 'uuid';
-import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class MinioService {

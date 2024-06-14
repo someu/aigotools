@@ -8,7 +8,12 @@ import * as _ from 'lodash';
 import { Model } from 'mongoose';
 import OpenAI from 'openai';
 import * as sharp from 'sharp';
-import { PromptOutput, SiteSummaryPrompt } from '../prompts/site-summary';
+import {
+  CategorySummaryInput,
+  CategorySummaryOutput,
+  CategorySummaryPrompt,
+} from '../prompts/category-summary';
+import { SiteSummaryOutput, SiteSummaryPrompt } from '../prompts/site-summary';
 import { BrowserService } from '../providers/browser.service';
 import { COSService } from '../providers/cos.service';
 import { MinioService } from '../providers/minio.service';
@@ -149,20 +154,17 @@ export class SiteConsumer {
   private async summarySiteContent(site: Site) {
     // ai summary
     const content = await this.getUrlContent(site.url);
-    const imageRegex = /!\[.*?\]\((.*?)\)/g;
 
-    const images = [];
-    let match;
-    while ((match = imageRegex.exec(content)) !== null) {
-      images.push(match[1]);
-    }
+    // remove image
+    const imageRegex = /!\[.*?\]\((.*?)\)/g;
     const cleanedMarkdown = content.replace(imageRegex, '');
 
     const openai = new OpenAI({
       baseURL: this.configService.get('OPENAI_BASEURL'),
       apiKey: this.configService.get('OPENAI_KEY'),
     });
-    const response = await openai.chat.completions.create({
+
+    const summaryTask = openai.chat.completions.create({
       model: this.configService.get('OPENAI_MODEL'),
       messages: [
         { role: 'system', content: SiteSummaryPrompt },
@@ -171,21 +173,59 @@ export class SiteConsumer {
       temperature: 1,
       stream: false,
     });
-    const cleanedContent = response.choices[0].message.content
+    const allCategories = await this.categoryModel.distinct('name', {});
+    const categoryTask = openai.chat.completions.create({
+      model: this.configService.get('OPENAI_MODEL'),
+      messages: [
+        { role: 'system', content: CategorySummaryPrompt },
+        {
+          role: 'user',
+          content: JSON.stringify({
+            siteDescription: cleanedMarkdown,
+            categories: allCategories,
+          } as CategorySummaryInput),
+        },
+      ],
+      temperature: 1,
+      stream: false,
+    });
+    const [summaryResponse, categoryResponse] = await Promise.all([
+      summaryTask,
+      categoryTask,
+    ]);
+    const cleanedSummaryContent = summaryResponse.choices[0].message.content
+      .replace(/(^```(json)?|```$)/g, '')
+      .trim();
+    const cleanedCategoryContent = categoryResponse.choices[0].message.content
       .replace(/(^```(json)?|```$)/g, '')
       .trim();
 
     let summaried;
     try {
-      summaried = JSON.parse(cleanedContent) as PromptOutput;
+      summaried = JSON.parse(cleanedSummaryContent) as SiteSummaryOutput;
     } catch (error) {
-      Logger.error(`parse output content error:\n${cleanedContent}`);
+      Logger.error(
+        `parse site summary content error:\n${cleanedSummaryContent}`,
+      );
+      throw error;
+    }
+
+    let categories = [] as string[];
+    try {
+      const output = JSON.parse(
+        cleanedCategoryContent,
+      ) as CategorySummaryOutput;
+      categories = output.categories;
+    } catch (error) {
+      Logger.error(
+        `parse category summary content error:\n${cleanedSummaryContent}`,
+      );
       throw error;
     }
 
     Logger.log(`summary ${site.url} success`);
 
-    return summaried;
+    return { summaried, categories };
   }
 
   @Process({
@@ -212,7 +252,7 @@ export class SiteConsumer {
 
       // const summaried = await this.summarySiteContent(site);
 
-      const [{ keywords, desceription, snapshot }, summaried] =
+      const [{ keywords, desceription, snapshot }, { summaried, categories }] =
         await Promise.all([
           this.getUrlScreenshot(site.url),
           this.summarySiteContent(site),
@@ -220,27 +260,10 @@ export class SiteConsumer {
 
       // transform category to id
       let categoriesIds = [] as string[];
-      const summariedCatrgories = _.get(summaried, 'categories', []);
-      if (summariedCatrgories.length) {
-        const existedCategories = await this.categoryModel.find({
-          name: { $in: summariedCatrgories },
+      if (categories.length) {
+        categoriesIds = await this.categoryModel.distinct('_id', {
+          name: categories,
         });
-        const newCategoryNames = _.difference(
-          summariedCatrgories,
-          _.map(existedCategories, 'name'),
-        );
-        const newCategories = await this.categoryModel.insertMany(
-          newCategoryNames.map((name) => {
-            return {
-              icon: '',
-              name,
-            };
-          }),
-        );
-        categoriesIds.push(
-          ..._.map(existedCategories, '_id'),
-          ..._.map(newCategories, '_id'),
-        );
       } else {
         categoriesIds = site.categories;
       }

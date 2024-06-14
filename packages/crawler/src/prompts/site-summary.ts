@@ -15,13 +15,13 @@ You need to conduct a comprehensive content analysis of a website, accepting the
 - JSON
 
 ## Goals
-Provide a comprehensive website analysis JSON output that includes detailed introduction, potential user groups and usage scenarios, categories, features, website links, and pricing types and tiers.
+Provide a comprehensive website analysis JSON output that includes detailed introduction, potential user groups and usage scenarios, features, website links, and pricing types and tiers.
 
 ## Workflow
 1. Determine the website to analyze.
 2. Identify at least 5 potential user groups.
 3. Generate at least 5 possible very detailed usage scenarios, detailing what features are used in what situations to solve which problems.
-4. Summarize the website's categories, functional features, pricing types, and tiers.
+4. Summarize the website's functional features, pricing types, and tiers.
 5. Generate at least 10 SEO keywords for this website.
 6. Generate 5 search suggest words for similar websites to this website.
 7. Attempt to extract the website's own links, including the login page, registration page, documentation page, and pricing page. For pages that do not exist, set them to null.
@@ -34,7 +34,6 @@ interface Output {
   introduction: string;
   users: string[];
   features: string[];
-  categories: string[];
   usecases: string[];
   keywords: string[];
   searchSuggestWords: string[];
@@ -53,12 +52,11 @@ interface Output {
 - Your output should not include any additional explanations.
 - Your output should not include markdown backticks at the start or end.`.trim();
 
-export interface PromptOutput {
+export interface SiteSummaryOutput {
   name: string;
   introduction: string;
   users: string[];
   features: string[];
-  categories: string[];
   usecases: string[];
   keywords: string[];
   searchSuggestWords: string[];

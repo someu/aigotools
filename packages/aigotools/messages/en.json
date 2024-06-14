@@ -28,7 +28,8 @@
     "featured": "Featured",
     "latest": "Latest",
     "searchPlaceholder": "i want to write an article...",
-    "clearAll": "Clear All"
+    "clearAll": "Clear All",
+    "more": "More +"
   },
   "metadata": {
     "title": "aigotools.com",
@@ -100,8 +101,10 @@
     "index": "Index",
     "url": "Url",
     "title": "Site Manage",
+    "weight": "Weight",
     "search": "Search",
     "operation": "Operations",
+    "category": "Category",
     "inputSearch": "Search a site",
     "selectState": "Site state",
     "selectProcess": "Process stage",
@@ -136,6 +139,7 @@
     "url": "Url",
     "name": "Name",
     "featured": "Featured",
+    "weight": "Weight",
     "snapshot": "Snapshot",
     "desceription": "Description",
     "pricingType": "PricingType",
@@ -159,7 +163,7 @@
     "new": "New",
     "inputSearch": "Search category name",
     "categoryName": "Category Name",
-    "categoryIcon": "Category Icon",
+    "weight": "Weight",
     "updatedAt": "Updated At",
     "operation": "Operations",
     "failSearch": "Search categories failed",
@@ -176,6 +180,11 @@
     "categoryIcon": "Category Icon",
     "saveFailed": "Save category failed",
     "save": "Save",
-    "featured": "Featured"
+    "featured": "Featured",
+    "weight": "Weight"
+  },
+  "categories": {
+    "metadata": { "title": "Categories" },
+    "loadFailed": "Load Failed"
   }
 }
