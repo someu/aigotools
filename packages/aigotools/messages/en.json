@@ -103,6 +103,7 @@
     "weight": "Weight",
     "search": "Search",
     "operation": "Operations",
+    "category": "Category",
     "inputSearch": "Search a site",
     "selectState": "Site state",
     "selectProcess": "Process stage",

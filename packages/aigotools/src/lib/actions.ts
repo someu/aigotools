@@ -96,6 +96,7 @@ export async function searchSites(search: string, page: number) {
 
 export interface SearchParams {
   state?: SiteState;
+  category?: string;
   processStage?: ProcessStage;
   search?: string;
   page: number;
@@ -113,6 +114,10 @@ function generateSiteFilterQuery(data: SearchParams) {
   }
   if (data.processStage) {
     query.processStage = data.processStage;
+  }
+
+  if (data.category) {
+    query.categories = data.category;
   }
 
   return query;
@@ -650,8 +655,13 @@ export async function managerSearchCategories(data: {
 }
 
 export async function getAllCategories() {
-  await dbConnect();
-  const categories = await CategoryModel.find({});
+  try {
+    await dbConnect();
+    const categories = await CategoryModel.find({}).sort({ name: 1 });
 
-  return categories.map(categoryToObject);
+    return categories.map(categoryToObject);
+  } catch (error) {
+    console.log("Get all cateogry error", error);
+    throw error;
+  }
 }

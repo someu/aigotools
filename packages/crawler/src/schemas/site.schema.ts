@@ -39,6 +39,9 @@ export class Site {
   featured: string;
 
   @Prop()
+  weight: number;
+
+  @Prop()
   snapshot: string;
 
   @Prop()
