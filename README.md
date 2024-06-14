@@ -34,11 +34,13 @@ AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自�
 
 ## 部署
 
-本项目包含导航站主体（`packages/aigotools`）和收录服务（`packages/crawler`）两个部分，可以通过vercel+zeabur等托管服务部署，也可以在使用`docker-compose`直接在本地部署。
+本项目包含导航站主体（`packages/aigotools`）和收录服务（`packages/crawler`）两个部分，可以通过zeabur等托管服务部署，也可以在使用`docker-compose`直接在本地部署。
 
 ### 前置准备
 
-你需要申请好`OpenAI apiKey`和`jina apiKey`，它们会在收录网站时使用。此外，如果是托管服务部署，还需要部署mongodb、redis数据库。
+- 前往 https://clerk.com/ 创建 application，并添加一个用户作为登录管理后台的管理员。
+- 申请好`OpenAI apiKey`和`jina apiKey`，它们会在收录网站时使用
+- 如果是托管服务部署，请部署好mongodb、redis数据库
 
 ### 本地部署
 
@@ -69,15 +71,8 @@ AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自�
 
 ### 托管服务部署
 
-1. vercel部署导航站主体
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F6677-ai%2Ftap4-ai-webui.git&env=NEXT_PUBLIC_SITE_URL,GOOGLE_TRACKING_ID,GOOGLE_ADSENSE_URL,CONTACT_US_EMAIL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY&project-name=tap4-ai)
-
-   
-
-2. zeabur部署爬取服务
-
-   [![Deployed on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=leoli202303&utm_source=leoli202303)
+[![Deployed on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=leoli202303&utm_source=leoli202303)
 
 
 
