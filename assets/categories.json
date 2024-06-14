@@ -1,0 +1,1535 @@
+[
+  {
+    "icon": "",
+    "name": "Data extraction",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Code assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Customer support",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Art Generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Translation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Life assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Chatbot builder",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Gaming",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "AI Assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Business planning",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Social media",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Developer tools",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Security and Privacy",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Team Collaboration",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Fun",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Personal assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Investment",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Legal",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Automation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Stories",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Human Resources",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Business",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Study assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Summarizer",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Development",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Productivity",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "SEO",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image Editing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Startup tools",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Essay writer",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Job Search",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Content creation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Video editing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Content Creation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image Generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "LLM",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Real estate",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Relationships",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Avatar",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Interior design",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Email assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Prompt Guides",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "AI Characters",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Video generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "AI detection",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Homework assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Travel",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Transcriber",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "AI website builder",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Spreadsheets",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Course Generator",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Music",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Branding",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Meeting assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Email",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Note taking",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Writing assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "E-commerce",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Design",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Data analysis",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Text-to-speech",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Document assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Article writer",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Marketing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Sales",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Education",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Paraphraser",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Resume enhancement",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Audio",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Coaching",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "No-code",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Book writer",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Video Generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Video Editing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Interview Preparation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Task management",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Chat",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Language Learning",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Finance",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Prompts",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Code Assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Audio generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Self-improvement",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Pets",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Social media growth",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Social media management",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "no-code",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "3d",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Recipe Generator",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Teacher assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "AI Agents",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Research",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image editing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Fashion",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "News",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Podcasting",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Project management",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Sports",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Personal finance",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Text-to-video",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Images",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Document management",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Video",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Health",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "File management",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Scheduling assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Personal knowledge base",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Advertising",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Search engine",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Speech-to-text",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image scanning",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Fitness",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Social media content",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Accounting assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Grammar checker",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Human resources",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Beauty",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image Generator",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Knowledge base management",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Inspiration",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Databases",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Review",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Motion capture",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Quiz generator",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Audio Generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Logo generator",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Copywriting",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Social media engagement",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Gift ideas",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Writing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Noise cancellation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Presentations",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "4d generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image improvement",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image Improvement",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Real Estate",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Avatars",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Resources",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Life Assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image Scanning",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Personalized videos",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Poem writer",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Sql",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Other",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Name generator",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Tax assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Aggregators",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "AI Detection",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Logo Generator",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Audio editing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Model generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Voice",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Data Analysis",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Chatbots",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Customer Support",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Memory",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Voice Generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Meeting Assistant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "3D",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Prompts Guides",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Virtual team",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "eCommerce",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Text-to-Speech",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Excel",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Search Engine",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "ContentCreation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "SQL",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Name Generator",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Document Search",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Administration",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Social Media",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Gift Ideas",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Audio Editing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Youtube",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Voice Editing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Ai detection",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Customer Service",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Skin care",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Meeting Assistance",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Free",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Recipes",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Team collaboration",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "ChatGPT",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Usage based",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Presentation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Vide Editing",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Chatbot",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Ecommerce",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Transcribe",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Startup Tools",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Videos",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "AI assitant",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Resume",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Google sheets",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Text-to-Video",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Stratup tools",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Audio & Voice",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Hairstyle",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Text-to-Image",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Image Geneartion",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Speech-to-Text",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Prompt guides",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "AI",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Lifestyle",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Newsletter",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Text-To-Video",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Images Scanning",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Motion Capture",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Model Generation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Text-To-Speech",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Gifts",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Speech-To-Text",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Text-to-Character",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Self-Improvement",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Data Generator",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Jobs",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  },
+  {
+    "icon": "",
+    "name": "Voice Modulation",
+    "featureWeight": 0,
+    "createdAt": 1718347615886,
+    "updatedAt": 1718347615886
+  }
+]

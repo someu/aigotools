@@ -35,6 +35,7 @@ import { Site } from "@/models/site";
 import {
   SearchParams,
   dispatchAllSitesCrawl,
+  getAllCategories,
   managerSearchSites,
   stopAllSitesCrawl,
 } from "@/lib/actions";
@@ -77,6 +78,16 @@ export default function SitesTable() {
     },
     refetchInterval: 5000,
   });
+
+  const { data: categories } = useQuery({
+    queryKey: ["get-all-categories"],
+    queryFn: async () => {
+      return await getAllCategories();
+    },
+    initialData: [],
+  });
+
+  console.log(categories);
 
   const stopAllSite = useCallback(
     async (e: any) => {
@@ -149,6 +160,26 @@ export default function SitesTable() {
           </DropdownMenu>
         </Dropdown>
         <div className="flex-1" />
+        <Select
+          className="w-48"
+          placeholder={t("category")}
+          selectedKeys={searchParams.category}
+          size="sm"
+          onChange={(e) =>
+            setSearchParams({
+              ...searchParams,
+              category: e.target.value as any,
+              page: 1,
+            })
+          }
+        >
+          {categories.map((category) => (
+            <SelectItem key={category._id}>
+              {category.icon}
+              {category.name}
+            </SelectItem>
+          ))}
+        </Select>
         <Select
           className="w-48"
           placeholder={t("processStage")}

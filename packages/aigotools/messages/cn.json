@@ -103,6 +103,7 @@
     "weight": "权重",
     "search": "搜索",
     "operation": "操作",
+    "category": "分类",
     "inputSearch": "搜索站点",
     "selectState": "站点状态",
     "selectProcess": "爬取状态",
