@@ -163,7 +163,6 @@ export default function SitesTable() {
         <Select
           className="w-48"
           placeholder={t("category")}
-          selectedKeys={searchParams.category}
           size="sm"
           onChange={(e) =>
             setSearchParams({
@@ -175,8 +174,7 @@ export default function SitesTable() {
         >
           {categories.map((category) => (
             <SelectItem key={category._id}>
-              {category.icon}
-              {category.name}
+              {`${category.icon || ""} ${category.name}`.trim()}
             </SelectItem>
           ))}
         </Select>

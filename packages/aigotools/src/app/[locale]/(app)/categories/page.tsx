@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
+import CategoriesList from "@/components/categories/categories-list";
 import Container from "@/components/common/container";
 import NavBar from "@/components/common/nav-bar";
-import InfiniteSearch from "@/components/search/infinite-search";
 
 export async function generateMetadata({
   params,
@@ -12,7 +13,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({
     locale: params.locale,
-    namespace: "search",
+    namespace: "categories",
   });
 
   return {
@@ -20,20 +21,13 @@ export async function generateMetadata({
   };
 }
 
-export default function Page({
-  searchParams,
-}: {
-  searchParams: {
-    s: string;
-  };
-}) {
-  const rawSearch = searchParams["s"] || "";
-  const search = decodeURIComponent(rawSearch.toString());
+export default function Page() {
+  const t = useTranslations("categories");
 
   return (
     <Container>
-      <NavBar name={search} />
-      <InfiniteSearch />
+      <NavBar name={t("metadata.title")} />
+      <CategoriesList />
     </Container>
   );
 }
