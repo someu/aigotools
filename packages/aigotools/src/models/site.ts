@@ -1,13 +1,14 @@
 import mongoose, { Model } from "mongoose";
 
-import { MongoPlain } from "@/lib/types";
 import { ProcessStage, SiteState } from "@/lib/constants";
+import { MongoPlain } from "@/lib/types";
 
 export interface SiteDocument extends mongoose.Document {
   userId: string;
   url: string;
   siteKey: string;
   featured: boolean;
+  weight: number;
   name: string;
   snapshot: string;
   desceription: string;
@@ -43,6 +44,7 @@ const SiteSchema = new mongoose.Schema<SiteDocument>({
   url: { type: String, required: true },
   name: { type: String },
   featured: { type: Boolean, default: false },
+  weight: { type: Number, default: 0 },
   snapshot: { type: String, default: "" },
   desceription: { type: String, default: "" },
   pricingType: { type: String, default: "" },

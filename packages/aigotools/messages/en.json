@@ -100,6 +100,7 @@
     "index": "Index",
     "url": "Url",
     "title": "Site Manage",
+    "weight": "Weight",
     "search": "Search",
     "operation": "Operations",
     "inputSearch": "Search a site",
@@ -136,6 +137,7 @@
     "url": "Url",
     "name": "Name",
     "featured": "Featured",
+    "weight": "Weight",
     "snapshot": "Snapshot",
     "desceription": "Description",
     "pricingType": "PricingType",
@@ -159,7 +161,7 @@
     "new": "New",
     "inputSearch": "Search category name",
     "categoryName": "Category Name",
-    "categoryIcon": "Category Icon",
+    "weight": "Weight",
     "updatedAt": "Updated At",
     "operation": "Operations",
     "failSearch": "Search categories failed",
@@ -176,6 +178,7 @@
     "categoryIcon": "Category Icon",
     "saveFailed": "Save category failed",
     "save": "Save",
-    "featured": "Featured"
+    "featured": "Featured",
+    "weight": "Weight"
   }
 }

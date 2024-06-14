@@ -1,13 +1,14 @@
+import { ProcessStage, SiteState } from "./constants";
+
 import { Site } from "@/models/site";
 
-import { SiteState } from "./constants";
-
 export const createTemplateSite = (site: Partial<Site> = {}) => {
-  return {
+  const newSite: Omit<Site, "_id"> = {
     userId: "",
     url: "",
     siteKey: "",
     featured: false,
+    weight: 0,
     name: "",
     snapshot: "",
     desceription: "",
@@ -25,8 +26,10 @@ export const createTemplateSite = (site: Partial<Site> = {}) => {
     metaDesceription: "",
     searchSuggestWords: [],
     state: SiteState.unpublished,
-    ...site,
     createdAt: Date.now(),
     updatedAt: Date.now(),
-  } as Site;
+    processStage: ProcessStage.pending,
+  };
+
+  return { newSite, ...site } as Site;
 };
