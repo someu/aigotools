@@ -11,18 +11,26 @@ import { useCallback, useEffect, useState } from "react";
 import { History, SearchIcon, Trash2 } from "lucide-react";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
+import { useQuery } from "@tanstack/react-query";
 
-import { useRouter } from "@/navigation";
+import { getFeaturedCategories } from "../../lib/actions";
+
+import CategoryTag from "./cateogry-tag";
+
+import { Link, useRouter } from "@/navigation";
 import Container from "@/components/common/container";
 
 export default function Search({
   defaultSearch,
+  category,
   className,
 }: {
   defaultSearch?: string;
+  category?: string;
   className?: string;
 }) {
   const [value, setValue] = useState(defaultSearch || "");
+
   const router = useRouter();
 
   const t = useTranslations("index");
@@ -39,11 +47,11 @@ export default function Search({
     (newRecord: string) => {
       window.localStorage.setItem(
         "histories",
-        JSON.stringify([newRecord, ...histories].slice(10)),
+        JSON.stringify([newRecord, ...histories].slice(10))
       );
       loadHistories();
     },
-    [histories, loadHistories],
+    [histories, loadHistories]
   );
 
   const clearHistories = useCallback(() => {
@@ -55,7 +63,14 @@ export default function Search({
     loadHistories();
   }, [loadHistories]);
 
-  const history = (
+  const { data: featuredCategories = [] } = useQuery({
+    queryKey: ["all-featured-categories"],
+    async queryFn() {
+      return await getFeaturedCategories();
+    },
+  });
+
+  const history = histories.length ? (
     <Dropdown placement="bottom-end">
       <DropdownTrigger>
         <History
@@ -90,7 +105,7 @@ export default function Search({
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>
-  );
+  ) : null;
 
   return (
     <Container className={clsx("mt-10 sm:mt-16", className)}>
@@ -99,7 +114,12 @@ export default function Search({
           onSubmit={(e) => {
             e.preventDefault();
             saveHistories(value);
-            router.push(`/search?s=${encodeURIComponent(value)}`);
+            let url = `/search?s=${encodeURIComponent(value)}`;
+
+            if (category) {
+              url += `&c=${encodeURIComponent(category)}`;
+            }
+            router.push(url);
           }}
         >
           <Input
@@ -126,6 +146,31 @@ export default function Search({
           />
         </form>
       </div>
+      {featuredCategories.length > 0 && (
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
+          {featuredCategories.map((item) => {
+            return (
+              <CategoryTag
+                key={item._id}
+                active={item.name === category}
+                onClick={() => {
+                  const url = `/search?s=${encodeURIComponent(
+                    value
+                  )}&c=${encodeURIComponent(item.name)}`;
+
+                  router.push(url);
+                }}
+              >
+                {item.icon}
+                {item.name}
+              </CategoryTag>
+            );
+          })}
+          <Link href={"/categories"}>
+            <CategoryTag>{t("more")}</CategoryTag>
+          </Link>
+        </div>
+      )}
     </Container>
   );
 }

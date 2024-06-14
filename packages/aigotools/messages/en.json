@@ -28,7 +28,8 @@
     "featured": "Featured",
     "latest": "Latest",
     "searchPlaceholder": "i want to write an article...",
-    "clearAll": "Clear All"
+    "clearAll": "Clear All",
+    "more": "More +"
   },
   "metadata": {
     "title": "aigotools.com",
@@ -181,5 +182,9 @@
     "save": "Save",
     "featured": "Featured",
     "weight": "Weight"
+  },
+  "categories": {
+    "metadata": { "title": "Categories" },
+    "loadFailed": "Load Failed"
   }
 }

@@ -28,7 +28,8 @@
     "featured": "推荐",
     "latest": "最新",
     "searchPlaceholder": "我想写一篇文章...",
-    "clearAll": "清除所有"
+    "clearAll": "清除所有",
+    "more": "更多 +"
   },
   "metadata": {
     "title": "aigotools.com",
@@ -181,5 +182,9 @@
     "save": "保存",
     "featured": "推荐",
     "weight": "权重"
+  },
+  "categories": {
+    "metadata": { "title": "分类" },
+    "loadFailed": "加载失败"
   }
 }
