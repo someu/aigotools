@@ -129,7 +129,33 @@ export default function SiteEdit({
                 {...register("featured")}
               />
             </div>
-
+            <Input
+              label={t("weight")}
+              size="sm"
+              value={formValues.weight as unknown as any}
+              onValueChange={(value) => {
+                setValue("weight", parseInt(value, 10));
+              }}
+            />
+            <Select
+              // className="col-span-2"
+              label={t("categories")}
+              selectedKeys={formValues.categories}
+              selectionMode="multiple"
+              size="sm"
+              onSelectionChange={(value) => {
+                setValue(
+                  "categories",
+                  Array.from(value).map((item) => item.toString())
+                );
+              }}
+            >
+              {categories.map((category) => {
+                return (
+                  <SelectItem key={category._id}>{category.name}</SelectItem>
+                );
+              })}
+            </Select>
             <ArrowInput
               label={t("features")}
               value={formValues.features}
@@ -185,25 +211,7 @@ export default function SiteEdit({
                 setValue("images", value);
               }}
             />
-            <Select
-              className="col-span-2"
-              label={t("categories")}
-              selectedKeys={formValues.categories}
-              selectionMode="multiple"
-              size="sm"
-              onSelectionChange={(value) => {
-                setValue(
-                  "categories",
-                  Array.from(value).map((item) => item.toString())
-                );
-              }}
-            >
-              {categories.map((category) => {
-                return (
-                  <SelectItem key={category._id}>{category.name}</SelectItem>
-                );
-              })}
-            </Select>
+
             <Textarea
               label={t("desceription")}
               size="sm"

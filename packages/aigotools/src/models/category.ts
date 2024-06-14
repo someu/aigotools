@@ -5,7 +5,8 @@ import { MongoPlain } from "@/lib/types";
 export interface CategoryDocument extends mongoose.Document {
   icon: string;
   name: string;
-  featureWeight: number;
+  featured: boolean;
+  weight: number;
   createdAt: number;
   updatedAt: number;
 }
@@ -21,7 +22,8 @@ const CategorySchema = new mongoose.Schema<Category>({
     required: true,
     unique: true,
   },
-  featureWeight: { type: Number, default: 0 },
+  featured: { type: Boolean, default: false },
+  weight: { type: Number, default: 0 },
   createdAt: {
     type: Number,
     default: () => Date.now(),

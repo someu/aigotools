@@ -27,6 +27,9 @@ import { useQuery } from "@tanstack/react-query";
 import { debounce } from "lodash";
 import { Atom, Axe, Plus, SearchIcon, StopCircle } from "lucide-react";
 
+import SiteEdit from "./site-edit";
+import SiteOperation from "./site-operation";
+
 import { ProcessStage, SiteState } from "@/lib/constants";
 import { Site } from "@/models/site";
 import {
@@ -39,9 +42,6 @@ import Loading from "@/components/common/loading";
 import EmptyImage from "@/components/search/empty-image";
 import { Link } from "@/navigation";
 import { createTemplateSite } from "@/lib/create-template-site";
-
-import SiteEdit from "./site-edit";
-import SiteOperation from "./site-operation";
 
 export default function SitesTable() {
   const t = useTranslations("siteManage");
@@ -95,7 +95,7 @@ export default function SitesTable() {
         toast(t("stopFailed"));
       }
     },
-    [handleSearch, searchParams, t],
+    [handleSearch, searchParams, t]
   );
 
   const dispatchAllSite = useCallback(
@@ -115,7 +115,7 @@ export default function SitesTable() {
         toast(t("dispatchFailed"));
       }
     },
-    [handleSearch, searchParams, t],
+    [handleSearch, searchParams, t]
   );
 
   return (
@@ -203,7 +203,7 @@ export default function SitesTable() {
             1000,
             {
               maxWait: 5000,
-            },
+            }
           )}
         />
       </div>
@@ -213,6 +213,7 @@ export default function SitesTable() {
             <TableColumn>{t("index")}</TableColumn>
             <TableColumn>{t("siteName")}</TableColumn>
             <TableColumn>{t("url")}</TableColumn>
+            <TableColumn>{t("weight")}</TableColumn>
             <TableColumn maxWidth={100}>{t("state")}</TableColumn>
             <TableColumn maxWidth={100}>{t("processStage")}</TableColumn>
             <TableColumn maxWidth={160}>{t("updatedAt")}</TableColumn>
@@ -246,6 +247,7 @@ export default function SitesTable() {
                     {site.url}
                   </Link>
                 </TableCell>
+                <TableCell>{site.weight}</TableCell>
                 <TableCell>
                   <span
                     className={clsx(
@@ -253,7 +255,7 @@ export default function SitesTable() {
                       {
                         "bg-primary-500 opacity-80":
                           site.state !== SiteState.published,
-                      },
+                      }
                     )}
                   >
                     {t(site.state)}
@@ -270,7 +272,7 @@ export default function SitesTable() {
                           site.processStage === ProcessStage.processing,
                         "bg-primary-500 opacity-80":
                           site.processStage === ProcessStage.pending,
-                      },
+                      }
                     )}
                   >
                     {site.processStage === ProcessStage.processing && (

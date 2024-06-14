@@ -18,14 +18,14 @@ import dayjs from "dayjs";
 import { debounce } from "lodash";
 import { Plus } from "lucide-react";
 
+import CategoryEdit from "./category-edit";
+import CategoryOperation from "./category-operation";
+
 import { managerSearchCategories } from "@/lib/actions";
 import Loading from "@/components/common/loading";
 import EmptyImage from "@/components/search/empty-image";
 import { Category } from "@/models/category";
 import { createTemplateCategory } from "@/lib/create-template-category";
-
-import CategoryEdit from "./category-edit";
-import CategoryOperation from "./category-operation";
 
 interface SearchForm {
   search?: string;
@@ -99,7 +99,7 @@ export default function CategoryTable() {
             1000,
             {
               maxWait: 5000,
-            },
+            }
           )}
         />
       </div>
@@ -107,7 +107,7 @@ export default function CategoryTable() {
         <Table className="mt-6" shadow="sm">
           <TableHeader>
             <TableColumn>{t("categoryName")}</TableColumn>
-            <TableColumn>{t("categoryIcon")}</TableColumn>
+            <TableColumn>{t("weight")}</TableColumn>
             <TableColumn>{t("featured")}</TableColumn>
             <TableColumn maxWidth={160}>{t("updatedAt")}</TableColumn>
             <TableColumn maxWidth={160}>{t("operation")}</TableColumn>
@@ -121,8 +121,11 @@ export default function CategoryTable() {
           >
             {searchResult.categories.map((category) => (
               <TableRow key={category._id}>
-                <TableCell>{category.name}</TableCell>
-                <TableCell>{category.icon}</TableCell>
+                <TableCell>
+                  {category.icon}
+                  {category.name}
+                </TableCell>
+                <TableCell>{category.weight}</TableCell>
                 <TableCell>{category.featured ? "True" : "False"}</TableCell>
                 <TableCell>
                   {dayjs(category.updatedAt).format("YYYY-MM-DD HH:mm:ss")}

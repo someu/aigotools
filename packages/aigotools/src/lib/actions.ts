@@ -3,15 +3,15 @@ import { currentUser } from "@clerk/nextjs/server";
 import { FilterQuery } from "mongoose";
 import axios from "axios";
 
+import { createTemplateSite } from "./create-template-site";
+import { ProcessStage, ReviewState, SiteState } from "./constants";
+import { AppConfig } from "./config";
+
 import dbConnect from "@/lib/db-connect";
 import { Site, SiteDocument, SiteModel } from "@/models/site";
 import { Review, ReviewDocument, ReviewModel } from "@/models/review";
 import { UpvoteModel, UpvoteType } from "@/models/upvote";
 import { Category, CategoryDocument, CategoryModel } from "@/models/category";
-
-import { createTemplateSite } from "./create-template-site";
-import { ProcessStage, ReviewState, SiteState } from "./constants";
-import { AppConfig } from "./config";
 
 function siteToObject(site: SiteDocument) {
   const siteObj = site.toObject();
@@ -25,7 +25,7 @@ function siteToObject(site: SiteDocument) {
 
 function pickCategoryName(site: Site) {
   site.categories = site.categories.map(
-    (cate) => (cate as unknown as Category).name,
+    (cate) => (cate as unknown as Category).name
   );
 
   return site;
@@ -158,6 +158,7 @@ export async function getFeaturedSites(size = 12) {
       featured: true,
       state: SiteState.published,
     })
+      .sort({ weight: -1 })
       .limit(size)
       .populate("categories");
 
@@ -256,7 +257,7 @@ export async function getSiteDetailByKey(siteKey: string) {
         _id: { $ne: site._id },
         state: SiteState.published,
       },
-      { score: { $meta: "textScore" } },
+      { score: { $meta: "textScore" } }
     )
       .sort({ score: { $meta: "textScore" } })
       .limit(12)
@@ -360,7 +361,7 @@ export async function saveSite(site: Site) {
       saved = (await SiteModel.findByIdAndUpdate(
         site._id,
         { $set: site },
-        { returnDocument: "after" },
+        { returnDocument: "after" }
       )) as any;
     } else {
       site.userId = user.id;
@@ -476,7 +477,7 @@ export async function updateReviewState(reviewId: string, state: ReviewState) {
           userId: user.id,
           name: review.name,
           url: review.url,
-        }),
+        })
       );
 
       if (site) {
@@ -506,7 +507,7 @@ export async function dispatchSiteCrawl(siteId: string) {
         headers: {
           Authorization: `Basic ${AppConfig.crawlerAuthToken}`,
         },
-      },
+      }
     );
   } catch (error) {
     console.log("Dispatch site crawl error", error);
@@ -525,7 +526,7 @@ export async function stopSiteCrawl(siteId: string) {
         headers: {
           Authorization: `Basic ${AppConfig.crawlerAuthToken}`,
         },
-      },
+      }
     );
   } catch (error) {
     console.log("Stop site crawl error", error);
@@ -534,7 +535,7 @@ export async function stopSiteCrawl(siteId: string) {
 }
 
 export async function dispatchAllSitesCrawl(
-  data: Omit<SearchParams, "page" | "size">,
+  data: Omit<SearchParams, "page" | "size">
 ) {
   try {
     await assertIsManager();
@@ -546,7 +547,7 @@ export async function dispatchAllSitesCrawl(
         headers: {
           Authorization: `Basic ${AppConfig.crawlerAuthToken}`,
         },
-      },
+      }
     );
   } catch (error) {
     console.log("Dispatch site crawl error", error);
@@ -555,7 +556,7 @@ export async function dispatchAllSitesCrawl(
 }
 
 export async function stopAllSitesCrawl(
-  data: Omit<SearchParams, "page" | "size">,
+  data: Omit<SearchParams, "page" | "size">
 ) {
   try {
     await assertIsManager();
@@ -567,7 +568,7 @@ export async function stopAllSitesCrawl(
         headers: {
           Authorization: `Basic ${AppConfig.crawlerAuthToken}`,
         },
-      },
+      }
     );
   } catch (error) {
     console.log("Dispatch site crawl error", error);
@@ -605,7 +606,7 @@ export async function deleteCategory(id: string) {
       },
       {
         $pull: { categories: id },
-      },
+      }
     );
   } catch (error) {
     console.log("Dispatch site crawl error", error);

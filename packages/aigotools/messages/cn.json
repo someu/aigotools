@@ -100,6 +100,7 @@
     "index": "序号",
     "url": "URL",
     "title": "站点管理",
+    "weight": "权重",
     "search": "搜索",
     "operation": "操作",
     "inputSearch": "搜索站点",
@@ -136,6 +137,7 @@
     "url": "URL",
     "name": "名称",
     "featured": "推荐",
+    "weight": "权重",
     "snapshot": "屏幕截图",
     "description": "描述",
     "pricingType": "定价类型",
@@ -159,7 +161,7 @@
     "new": "新建",
     "inputSearch": "搜索分类名",
     "categoryName": "分类名称",
-    "categoryIcon": "图标",
+    "weight": "权重",
     "updatedAt": "更新于",
     "operation": "操作",
     "failSearch": "搜索分类失败",
@@ -176,6 +178,7 @@
     "categoryIcon": "图标",
     "saveFailed": "保存分类失败",
     "save": "保存",
-    "featured": "推荐"
+    "featured": "推荐",
+    "weight": "权重"
   }
 }
