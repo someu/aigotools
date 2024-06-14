@@ -62,7 +62,15 @@ async function assertIsManager() {
   return user;
 }
 
-export async function searchSites(search: string, page: number) {
+export async function searchSites({
+  search,
+  page,
+  category,
+}: {
+  search: string;
+  category: string;
+  page: number;
+}) {
   try {
     await dbConnect();
 
@@ -72,6 +80,10 @@ export async function searchSites(search: string, page: number) {
       $text: { $search: search },
       state: SiteState.published,
     };
+
+    if (category) {
+      query.categories = (await CategoryModel.findOne({ name: category }))?._id;
+    }
 
     const [sites, count] = await Promise.all([
       SiteModel.find(query, { score: { $meta: "textScore" } })
@@ -96,6 +108,7 @@ export async function searchSites(search: string, page: number) {
 
 export interface SearchParams {
   state?: SiteState;
+  category?: string;
   processStage?: ProcessStage;
   search?: string;
   page: number;
@@ -113,6 +126,10 @@ function generateSiteFilterQuery(data: SearchParams) {
   }
   if (data.processStage) {
     query.processStage = data.processStage;
+  }
+
+  if (data.category) {
+    query.categories = data.category;
   }
 
   return query;
@@ -158,6 +175,7 @@ export async function getFeaturedSites(size = 12) {
       featured: true,
       state: SiteState.published,
     })
+      .sort({ weight: -1, updatedAt: -1 })
       .limit(size)
       .populate("categories");
 
@@ -607,27 +625,41 @@ export async function deleteCategory(id: string) {
         $pull: { categories: id },
       }
     );
+    await CategoryModel.deleteMany({ parent: id });
   } catch (error) {
     console.log("Dispatch site crawl error", error);
     throw error;
   }
 }
 
-export async function managerSearchCategories(data: {
+export interface CategorySearchForm {
   page: number;
   size: number;
   search?: string;
-}) {
+  parent?: string;
+  type?: "top" | "second";
+}
+
+export async function managerSearchCategories(data: CategorySearchForm) {
   try {
     await assertIsManager();
 
     await dbConnect();
 
-    const query: FilterQuery<SiteDocument> = {};
+    const query: FilterQuery<Category> = {};
 
     if (data.search) {
       query.name = { $regex: data.search, $options: "i" };
     }
+    if (data.parent) {
+      query.parent = parent;
+    }
+    if (data.type === "top") {
+      query.parent = null;
+    } else if (data.type == "second") {
+      query.parent = { $exists: true };
+    }
+
     const [categories, count] = await Promise.all([
       CategoryModel.find(query)
         .sort({ updatedAt: -1 })
@@ -648,9 +680,31 @@ export async function managerSearchCategories(data: {
   }
 }
 
-export async function getAllCategories() {
-  await dbConnect();
-  const categories = await CategoryModel.find({});
+export async function getFeaturedCategories() {
+  try {
+    await dbConnect();
 
-  return categories.map(categoryToObject);
+    const categories = await CategoryModel.find({
+      featured: true,
+      parent: { $exists: true },
+    }).sort({ weight: -1, updatedAt: -1 });
+
+    return categories.map(categoryToObject);
+  } catch (error) {
+    console.log("Get featured categories", error);
+
+    throw error;
+  }
+}
+
+export async function getAllCategories() {
+  try {
+    await dbConnect();
+    const categories = await CategoryModel.find({}).sort({ name: 1 });
+
+    return categories.map(categoryToObject);
+  } catch (error) {
+    console.log("Get all cateogry error", error);
+    throw error;
+  }
 }

@@ -16,8 +16,11 @@ export class Category {
   })
   name: string;
 
-  @Prop({ default: false })
+  @Prop()
   featured: boolean;
+
+  @Prop()
+  weight: number;
 
   @Prop({
     type: Number,

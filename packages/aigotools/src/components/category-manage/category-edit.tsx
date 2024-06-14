@@ -95,6 +95,14 @@ export default function CategoryEdit({
                 {...register("featured")}
               />
             </div>
+            <Input
+              label={t("weight")}
+              size="sm"
+              value={formValues.weight as unknown as any}
+              onValueChange={(value) => {
+                setValue("weight", parseInt(value, 10));
+              }}
+            />
           </form>
         </ModalBody>
         <ModalFooter>

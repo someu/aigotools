@@ -7,16 +7,17 @@ import { useSearchParams } from "next/navigation";
 import { TicketPlus } from "lucide-react";
 import { useEffect } from "react";
 
+import EmptyImage from "./empty-image";
+
 import Search from "@/components/index/search";
 import { searchSites } from "@/lib/actions";
 import SiteGroup from "@/components/common/sites-group";
 import { Site } from "@/models/site";
 
-import EmptyImage from "./empty-image";
-
 export default function InfiniteSearch() {
   const searchParams = useSearchParams();
   const search = decodeURIComponent(searchParams.get("s") || "");
+  const category = decodeURIComponent(searchParams.get("c") || "");
   const t = useTranslations("search");
 
   const {
@@ -29,7 +30,7 @@ export default function InfiniteSearch() {
   } = useInfiniteQuery({
     queryKey: ["search-sites"],
     queryFn: async ({ pageParam }) => {
-      return await searchSites(search, pageParam);
+      return await searchSites({ search, page: pageParam, category });
     },
     initialPageParam: 1,
     getNextPageParam: (lastPage) => {
@@ -48,14 +49,14 @@ export default function InfiniteSearch() {
 
   useEffect(() => {
     refetch({});
-  }, [search, refetch]);
+  }, [search, refetch, category]);
 
   const sites =
     data?.pages.reduce((t, c) => t.concat(c.sites), [] as Site[]) || [];
 
   return (
     <>
-      <Search className="sm:mt-12" defaultSearch={search} />
+      <Search category={category} className="sm:mt-12" defaultSearch={search} />
       <SiteGroup sites={sites} title={t("result")} />
       <div className="flex justify-center mt-8">
         {isFetching || isFetchingNextPage ? (

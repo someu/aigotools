@@ -106,7 +106,7 @@ export class BrowserService {
           .catch((error) => Logger.error(`Close browser page error: ${error}`));
       }
       if (destoryFlag) {
-        Logger.error(`Destory browser`);
+        Logger.error(`Destory browser for open page error`);
         await this.browserPool.destroy(browser);
       } else {
         await this.browserPool.release(browser);

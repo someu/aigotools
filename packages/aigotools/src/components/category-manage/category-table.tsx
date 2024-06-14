@@ -13,25 +13,22 @@ import {
   Input,
   Pagination,
   Button,
+  Select,
+  SelectItem,
 } from "@nextui-org/react";
 import dayjs from "dayjs";
 import { debounce } from "lodash";
 import { Plus } from "lucide-react";
-
-import { managerSearchCategories } from "@/lib/actions";
-import Loading from "@/components/common/loading";
-import EmptyImage from "@/components/search/empty-image";
-import { Category } from "@/models/category";
-import { createTemplateCategory } from "@/lib/create-template-category";
+import { useQuery } from "@tanstack/react-query";
 
 import CategoryEdit from "./category-edit";
 import CategoryOperation from "./category-operation";
 
-interface SearchForm {
-  search?: string;
-  page: number;
-  size: number;
-}
+import { CategorySearchForm, managerSearchCategories } from "@/lib/actions";
+import Loading from "@/components/common/loading";
+import EmptyImage from "@/components/search/empty-image";
+import { Category } from "@/models/category";
+import { createTemplateCategory } from "@/lib/create-template-category";
 
 export default function CategoryTable() {
   const t = useTranslations("categoryManage");
@@ -43,7 +40,7 @@ export default function CategoryTable() {
   const [category, setCategory] = useState<Category | undefined>(undefined);
 
   const [loading, setIsLoading] = useState(false);
-  const [searchParams, setSearchParams] = useState<SearchForm>({
+  const [searchParams, setSearchParams] = useState<CategorySearchForm>({
     page: 1,
     size: 15,
   });
@@ -71,6 +68,14 @@ export default function CategoryTable() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
+  const { data: allTopCategories } = useQuery({
+    queryKey: ["get-top-categories"],
+    queryFn: async () => {
+      return await managerSearchCategories({ page: 1, size: 999, type: "top" });
+    },
+    initialData: [],
+  });
+
   return (
     <div className="mt-4 relative py-4">
       <div
@@ -85,6 +90,43 @@ export default function CategoryTable() {
           {t("new")}
         </Button>
         <div className="flex-1" />
+        <Select
+          className="w-48"
+          placeholder={"分类"}
+          size="sm"
+          onChange={(e) =>
+            setSearchParams({
+              ...searchParams,
+              type: e.target.value as any,
+              page: 1,
+            })
+          }
+        >
+          <SelectItem key="top">一级分类</SelectItem>
+          <SelectItem key="second">二级分类</SelectItem>
+        </Select>
+        {searchParams.type === "second" && (
+          <Select
+            className="w-48"
+            placeholder={"分类"}
+            size="sm"
+            onChange={(e) =>
+              setSearchParams({
+                ...searchParams,
+                parent: e.target.value as any,
+                page: 1,
+              })
+            }
+          >
+            {allTopCategories.map((category) => {
+              return (
+                <SelectItem key="top" key={category._id}>
+                  {category.name}
+                </SelectItem>
+              );
+            })}
+          </Select>
+        )}
         <Input
           className="w-96"
           placeholder={t("inputSearch")}
@@ -99,7 +141,7 @@ export default function CategoryTable() {
             1000,
             {
               maxWait: 5000,
-            },
+            }
           )}
         />
       </div>
@@ -107,7 +149,7 @@ export default function CategoryTable() {
         <Table className="mt-6" shadow="sm">
           <TableHeader>
             <TableColumn>{t("categoryName")}</TableColumn>
-            <TableColumn>{t("categoryIcon")}</TableColumn>
+            <TableColumn>{t("weight")}</TableColumn>
             <TableColumn>{t("featured")}</TableColumn>
             <TableColumn maxWidth={160}>{t("updatedAt")}</TableColumn>
             <TableColumn maxWidth={160}>{t("operation")}</TableColumn>
@@ -121,8 +163,11 @@ export default function CategoryTable() {
           >
             {searchResult.categories.map((category) => (
               <TableRow key={category._id}>
-                <TableCell>{category.name}</TableCell>
-                <TableCell>{category.icon}</TableCell>
+                <TableCell>
+                  {category.icon}
+                  {category.name}
+                </TableCell>
+                <TableCell>{category.weight}</TableCell>
                 <TableCell>{category.featured ? "True" : "False"}</TableCell>
                 <TableCell>
                   {dayjs(category.updatedAt).format("YYYY-MM-DD HH:mm:ss")}
