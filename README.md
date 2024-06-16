@@ -70,7 +70,7 @@ AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自�
 
 ### 托管服务部署
 
-[![Deployed on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=someu&utm_source=someu)
+[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/9PSGFO?referralCode=someu)
 
 参考文档：[zeabur-deploy.md](./docs/zeabur-deploy.md)
 
@@ -117,10 +117,6 @@ AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自�
 
 标准 Readme 遵循 [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) 行为规范。
 
-<!-- ### 贡献者
-
-感谢以下参与项目的人：
-<a href="graphs/contributors"><img src="https://opencollective.com/aigotools/contributors.svg?width=890&button=false" /></a> -->
 
 ## 联系我们
 
