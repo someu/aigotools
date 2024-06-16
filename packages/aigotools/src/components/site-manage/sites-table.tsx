@@ -35,7 +35,7 @@ import { Site } from "@/models/site";
 import {
   SearchParams,
   dispatchAllSitesCrawl,
-  getAllCategories,
+  managerSearchCategories,
   managerSearchSites,
   stopAllSitesCrawl,
 } from "@/lib/actions";
@@ -80,14 +80,18 @@ export default function SitesTable() {
   });
 
   const { data: categories } = useQuery({
-    queryKey: ["get-all-categories"],
+    queryKey: ["all-second-categories"],
     queryFn: async () => {
-      return await getAllCategories();
+      const res = await managerSearchCategories({
+        page: 1,
+        size: 999,
+        type: "second",
+      });
+
+      return res.categories;
     },
     initialData: [],
   });
-
-  console.log(categories);
 
   const stopAllSite = useCallback(
     async (e: any) => {

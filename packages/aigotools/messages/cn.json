@@ -163,6 +163,10 @@
     "new": "新建",
     "inputSearch": "搜索分类名",
     "categoryName": "分类名称",
+    "categoryLevel": "层级",
+    "topLevel": "一级分类",
+    "secondaryLevel": "二级分类",
+    "parentCategory": "父分类",
     "weight": "权重",
     "updatedAt": "更新于",
     "operation": "操作",
@@ -176,6 +180,7 @@
   "categoryEdit": {
     "newTitle": "新建",
     "updateTitle": "更新",
+    "parentCategory": "父分类",
     "categoryName": "分类名称",
     "categoryIcon": "图标",
     "saveFailed": "保存分类失败",

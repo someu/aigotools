@@ -18,13 +18,13 @@ import {
   useUser,
 } from "@clerk/nextjs";
 
-import { Link } from "@/navigation";
-import { AppConfig } from "@/lib/config";
-
 import Container from "./container";
 import Logo from "./logo";
 import { ThemeSwitcher } from "./theme-switcher";
 import LanguageSwitcher from "./language-switcher";
+
+import { AppConfig } from "@/lib/config";
+import { Link } from "@/navigation";
 
 export default function Header({ className }: { className?: string }) {
   const t = useTranslations("header");
@@ -46,7 +46,7 @@ export default function Header({ className }: { className?: string }) {
     <Container
       className={clsx(
         "flex items-center justify-between h-20 sm:h-24",
-        className,
+        className
       )}
     >
       <Logo />
@@ -75,7 +75,7 @@ export default function Header({ className }: { className?: string }) {
             </Button>
           </Link>
           {isManager && (
-            <Link href={"/dashboard"}>
+            <Link href={"/dashboard"} target="_blank">
               <Button
                 className="font-semibold"
                 color="primary"

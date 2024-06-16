@@ -25,14 +25,17 @@ export default function Page({
 }: {
   searchParams: {
     s: string;
+    c: string;
   };
 }) {
+  const rawCategory = searchParams["c"] || "";
   const rawSearch = searchParams["s"] || "";
+  const category = decodeURIComponent(rawCategory.toString());
   const search = decodeURIComponent(rawSearch.toString());
 
   return (
     <Container>
-      <NavBar name={search} />
+      <NavBar name={[category, search].filter(Boolean)} />
       <InfiniteSearch />
     </Container>
   );

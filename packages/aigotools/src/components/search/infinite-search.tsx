@@ -60,7 +60,7 @@ export default function InfiniteSearch() {
       <SiteGroup sites={sites} title={t("result")} />
       <div className="flex justify-center mt-8">
         {isFetching || isFetchingNextPage ? (
-          <Spinner className="my-20" />
+          <Spinner className="my-24" />
         ) : hasNextPage ? (
           <Button
             className="font-semibold"
@@ -71,12 +71,12 @@ export default function InfiniteSearch() {
           >
             {t("loadMore")}
           </Button>
-        ) : (
+        ) : sites.length <= 0 ? (
           <div className="text-center my-16">
             <EmptyImage className="dark:invert" />
             <div className="mt-6 font-medium">{t("empty")}</div>
           </div>
-        )}
+        ) : null}
       </div>
     </>
   );

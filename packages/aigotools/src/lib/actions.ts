@@ -48,6 +48,10 @@ function categoryToObject(category: CategoryDocument) {
 
   delete categoryObj.__v;
 
+  if (categoryObj.parent) {
+    categoryObj.parent = categoryObj.parent.toString();
+  }
+
   return categoryObj as Category;
 }
 
@@ -77,26 +81,53 @@ export async function searchSites({
     const pageSize = 24;
 
     const query: FilterQuery<SiteDocument> = {
-      $text: { $search: search },
       state: SiteState.published,
     };
+
+    if (search) {
+      query.$text = { $search: search };
+    }
 
     if (category) {
       query.categories = (await CategoryModel.findOne({ name: category }))?._id;
     }
 
-    const [sites, count] = await Promise.all([
-      SiteModel.find(query, { score: { $meta: "textScore" } })
-        .sort({ score: { $meta: "textScore" } })
-        .skip((page - 1) * pageSize)
-        .limit(pageSize)
-        .populate("categories"),
-      SiteModel.countDocuments(query),
-    ]);
+    const regFindSites = await SiteModel.find({
+      $or: [
+        { name: { $regex: search, $options: "i" } },
+        { siteKey: { $regex: search, $options: "i" } },
+      ],
+    })
+      .sort({ weight: -1, updatedAt: -1 })
+      .limit(12);
+
+    query._id = { $nin: [] };
+
+    const baseFindTask = search
+      ? SiteModel.find(query, { score: { $meta: "textScore" } }).sort({
+          score: { $meta: "textScore" },
+        })
+      : SiteModel.find(query).sort({
+          weight: -1,
+          updatedAt: -1,
+        });
+
+    const findTask = baseFindTask
+      .skip((page - 1) * pageSize)
+      .limit(pageSize)
+      .populate("categories");
+
+    const countTask = SiteModel.countDocuments(query);
+
+    const [sites, count] = await Promise.all([findTask, countTask]);
+
+    console.log({ query, sites, count });
 
     return {
       page,
-      sites: sites.map(siteToObject).map(pickCategoryName),
+      sites: [...(page === 1 ? regFindSites : []), ...sites]
+        .map(siteToObject)
+        .map(pickCategoryName),
       hasNext: count > page * pageSize,
     };
   } catch (error) {
@@ -652,7 +683,7 @@ export async function managerSearchCategories(data: CategorySearchForm) {
       query.name = { $regex: data.search, $options: "i" };
     }
     if (data.parent) {
-      query.parent = parent;
+      query.parent = data.parent;
     }
     if (data.type === "top") {
       query.parent = null;
@@ -702,7 +733,24 @@ export async function getAllCategories() {
     await dbConnect();
     const categories = await CategoryModel.find({}).sort({ name: 1 });
 
-    return categories.map(categoryToObject);
+    const plainCategories = categories.map(categoryToObject);
+
+    const topCategories = plainCategories.filter((cate) => !cate.parent);
+    const secondaryCategories = plainCategories.filter((cate) => !!cate.parent);
+
+    const grouped = topCategories.map((category) => {
+      (category as any).children = secondaryCategories.filter(
+        (sec) => sec.parent === category._id
+      );
+
+      return category;
+    }) as Array<
+      Category & {
+        children: Array<Category>;
+      }
+    >;
+
+    return grouped.filter((c) => c.children.length);
   } catch (error) {
     console.log("Get all cateogry error", error);
     throw error;

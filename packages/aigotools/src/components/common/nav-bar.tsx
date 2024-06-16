@@ -4,7 +4,7 @@ import { Home } from "lucide-react";
 
 import { Link } from "@/navigation";
 
-export default function NavBar({ name }: { name: string }) {
+export default function NavBar({ name }: { name: string | string[] }) {
   return (
     <Breadcrumbs itemClasses={{ item: "text-primary-400 text-base" }}>
       <BreadcrumbItem>
@@ -12,7 +12,9 @@ export default function NavBar({ name }: { name: string }) {
           <Home size={16} /> <span>Home</span>
         </Link>
       </BreadcrumbItem>
-      <BreadcrumbItem>{name}</BreadcrumbItem>
+      {(Array.isArray(name) ? name : [name]).map((n, i) => (
+        <BreadcrumbItem key={i}>{n}</BreadcrumbItem>
+      ))}
     </Breadcrumbs>
   );
 }

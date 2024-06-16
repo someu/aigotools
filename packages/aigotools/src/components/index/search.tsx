@@ -13,10 +13,9 @@ import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useQuery } from "@tanstack/react-query";
 
-import { getFeaturedCategories } from "../../lib/actions";
-
 import CategoryTag from "./cateogry-tag";
 
+import { getFeaturedCategories } from "@/lib/actions";
 import { Link, useRouter } from "@/navigation";
 import Container from "@/components/common/container";
 
@@ -161,8 +160,7 @@ export default function Search({
                   router.push(url);
                 }}
               >
-                {item.icon}
-                {item.name}
+                {[item.icon, item.name].filter(Boolean).join(" ")}
               </CategoryTag>
             );
           })}
