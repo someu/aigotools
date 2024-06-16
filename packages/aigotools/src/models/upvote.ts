@@ -16,15 +16,18 @@ const UpvoteSchema = new mongoose.Schema<Upvote>({
   userId: {
     type: String,
     required: true,
+    index: true,
   },
   targetId: {
     type: String,
     required: true,
+    index: true,
   },
   upvoteType: {
     type: String,
     required: true,
     enum: Object.values(UpvoteType),
+    index: true,
   },
   createdAt: {
     type: Number,

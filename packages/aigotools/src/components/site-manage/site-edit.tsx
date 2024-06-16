@@ -24,7 +24,7 @@ import { Site } from "@/models/site";
 import ArrowInput from "@/components/common/arrow-input";
 import SingleImageUpload from "@/components/common/single-image-upload";
 import MultiImageUpload from "@/components/common/multi-image-upload";
-import { getAllCategories, saveSite } from "@/lib/actions";
+import { managerSearchCategories, saveSite } from "@/lib/actions";
 
 export default function SiteEdit({
   site,
@@ -78,10 +78,17 @@ export default function SiteEdit({
   }, [saving, trigger, getValues, t, onClose]);
 
   const { data: categories = [] } = useQuery({
-    queryKey: ["all-categories"],
+    queryKey: ["all-second-categories"],
     async queryFn() {
-      return await getAllCategories();
+      const res = await managerSearchCategories({
+        page: 1,
+        size: 999,
+        type: "second",
+      });
+
+      return res.categories;
     },
+    initialData: [],
   });
 
   return (
@@ -138,7 +145,6 @@ export default function SiteEdit({
               }}
             />
             <Select
-              // className="col-span-2"
               label={t("categories")}
               selectedKeys={formValues.categories}
               selectionMode="multiple"

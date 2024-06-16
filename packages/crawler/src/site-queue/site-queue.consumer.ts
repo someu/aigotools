@@ -173,7 +173,9 @@ export class SiteConsumer {
       temperature: 1,
       stream: false,
     });
-    const allCategories = await this.categoryModel.distinct('name', {});
+    const allCategories = await this.categoryModel.distinct('name', {
+      parent: { $ne: null },
+    });
     const categoryTask = openai.chat.completions.create({
       model: this.configService.get('OPENAI_MODEL'),
       messages: [

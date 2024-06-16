@@ -42,9 +42,9 @@ const SiteSchema = new mongoose.Schema<SiteDocument>({
   userId: { type: String, default: "00000000000000000" },
   siteKey: { type: String, required: true, unique: true, index: true },
   url: { type: String, required: true },
-  name: { type: String },
+  name: { type: String, index: true },
   featured: { type: Boolean, default: false },
-  weight: { type: Number, default: 0 },
+  weight: { type: Number, default: 0, index: true },
   snapshot: { type: String, default: "" },
   desceription: { type: String, default: "" },
   pricingType: { type: String, default: "" },
@@ -82,6 +82,7 @@ const SiteSchema = new mongoose.Schema<SiteDocument>({
   updatedAt: {
     type: Number,
     default: () => Date.now(),
+    index: true,
   },
 });
 

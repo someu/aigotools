@@ -9,7 +9,7 @@ export default async function AppLayout({
   return (
     <>
       <Header />
-      {children}
+      <main className="min-h-[60vh]">{children}</main>
       <Footer />
     </>
   );

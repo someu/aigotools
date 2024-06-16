@@ -44,6 +44,7 @@ const ReviewSchema = new mongoose.Schema<ReviewDocument>({
   updatedAt: {
     type: Number,
     default: () => Date.now(),
+    index: true,
   },
 });
 

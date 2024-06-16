@@ -36,6 +36,7 @@ const CategorySchema = new mongoose.Schema<Category>({
   updatedAt: {
     type: Number,
     default: () => Date.now(),
+    index: true,
   },
 });
 

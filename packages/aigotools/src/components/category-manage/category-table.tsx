@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { toast } from "react-toastify";
 import {
@@ -71,10 +71,27 @@ export default function CategoryTable() {
   const { data: allTopCategories } = useQuery({
     queryKey: ["get-top-categories"],
     queryFn: async () => {
-      return await managerSearchCategories({ page: 1, size: 999, type: "top" });
+      const res = await managerSearchCategories({
+        page: 1,
+        size: 999,
+        type: "top",
+      });
+
+      return res.categories;
     },
     initialData: [],
   });
+
+  const topCategoryNameMap = useMemo(() => {
+    return allTopCategories.reduce((t, c) => {
+      return {
+        ...t,
+        [c._id]: c.name,
+      };
+    }, {} as Record<string, string>);
+  }, [allTopCategories]);
+
+  console.log(topCategoryNameMap);
 
   return (
     <div className="mt-4 relative py-4">
@@ -92,7 +109,7 @@ export default function CategoryTable() {
         <div className="flex-1" />
         <Select
           className="w-48"
-          placeholder={"分类"}
+          placeholder={t("categoryLevel")}
           size="sm"
           onChange={(e) =>
             setSearchParams({
@@ -102,13 +119,13 @@ export default function CategoryTable() {
             })
           }
         >
-          <SelectItem key="top">一级分类</SelectItem>
-          <SelectItem key="second">二级分类</SelectItem>
+          <SelectItem key="top">{t("topLevel")}</SelectItem>
+          <SelectItem key="second">{t("secondaryLevel")}</SelectItem>
         </Select>
         {searchParams.type === "second" && (
           <Select
             className="w-48"
-            placeholder={"分类"}
+            placeholder={t("parentCategory")}
             size="sm"
             onChange={(e) =>
               setSearchParams({
@@ -120,9 +137,7 @@ export default function CategoryTable() {
           >
             {allTopCategories.map((category) => {
               return (
-                <SelectItem key="top" key={category._id}>
-                  {category.name}
-                </SelectItem>
+                <SelectItem key={category._id}>{category.name}</SelectItem>
               );
             })}
           </Select>
@@ -151,6 +166,7 @@ export default function CategoryTable() {
             <TableColumn>{t("categoryName")}</TableColumn>
             <TableColumn>{t("weight")}</TableColumn>
             <TableColumn>{t("featured")}</TableColumn>
+            <TableColumn>{t("parentCategory")}</TableColumn>
             <TableColumn maxWidth={160}>{t("updatedAt")}</TableColumn>
             <TableColumn maxWidth={160}>{t("operation")}</TableColumn>
           </TableHeader>
@@ -168,7 +184,17 @@ export default function CategoryTable() {
                   {category.name}
                 </TableCell>
                 <TableCell>{category.weight}</TableCell>
-                <TableCell>{category.featured ? "True" : "False"}</TableCell>
+                <TableCell>
+                  {category.parent
+                    ? category.featured
+                      ? "True"
+                      : "False"
+                    : "-"}
+                </TableCell>
+                <TableCell>
+                  {(category.parent && topCategoryNameMap[category.parent]) ||
+                    category.parent}
+                </TableCell>
                 <TableCell>
                   {dayjs(category.updatedAt).format("YYYY-MM-DD HH:mm:ss")}
                 </TableCell>
