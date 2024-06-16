@@ -4,7 +4,7 @@ WORKDIR /app
 
 FROM baserepo as builder
 COPY . .
-RUN pnpm install -g pnpm @nestjs/cli \
+RUN npm install -g pnpm @nestjs/cli \
   && pnpm install \
   && pnpm run build
 
