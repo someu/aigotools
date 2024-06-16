@@ -72,6 +72,8 @@ AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自�
 
 [![Deployed on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=someu&utm_source=someu)
 
+参考文档：[zeabur-deploy.md](./docs/zeabur-deploy.md)
+
 
 ## 开发
 
