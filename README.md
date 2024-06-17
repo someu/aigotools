@@ -3,7 +3,6 @@
 AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自动收录功能，同时提供国际化、SEO、图片存储等功能。让用户可以快速部署上线自己的导航站。
 
 
-
 ## 目录
 
 - [AigoTools](#aigotools)
@@ -66,7 +65,7 @@ AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自�
    docker-compose up -d
    ```
 
-**注意：如果采用minio存储图片，第一次启动项目时，minio的鉴权配置可以先不填。运行项目，进入minio管理后台创建ACCESS_KEY和SECERT_KEY，并将更新到配置文件中再重新启动项目。**
+**注意：如果采用minio存储图片，第一次启动项目时，minio的鉴权配置可以先不填。运行项目，进入minio管理后台创建Bucket、ACCESS_KEY和SECERT_KEY，开启Bucket的公开读权限，并将更新到配置文件中再重新启动项目。**
 
 ### 托管服务部署
 
