@@ -3,6 +3,11 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
   <h2 align="center">AigoTools</h2>
+  <a href="README.zh-CN.md">
+    简体中文
+  </a>
+  <br>
+  <br>
 </div>
 
 AigoTools helps users quickly create and manage navigation sites with built-in site management and automatic inclusion features. It also offers internationalization, SEO, and multiple image storage solutions, enabling users to quickly deploy and launch their own navigation site.
