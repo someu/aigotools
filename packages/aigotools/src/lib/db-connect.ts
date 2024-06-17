@@ -1,5 +1,7 @@
 import mongoose, { ConnectOptions } from "mongoose";
 
+import { ensureSiteIndexes } from "../models/site";
+
 import { AppConfig } from "@/lib/config";
 declare global {
   var mongoose: any;
@@ -7,7 +9,7 @@ declare global {
 
 if (!AppConfig.mongoUri) {
   throw new Error(
-    "Please define the MONGODB_URI environment variable inside .env.local",
+    "Please define the MONGODB_URI environment variable inside .env.local"
   );
 }
 
@@ -28,7 +30,10 @@ async function dbConnect() {
 
     const connection = mongoose
       .connect(AppConfig.mongoUri!, opts)
-      .then((mongoose) => {
+      .then(async (mongoose) => {
+        // after mongo collect
+        await ensureSiteIndexes();
+
         return mongoose;
       });
 
