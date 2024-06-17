@@ -51,8 +51,3 @@ const ReviewSchema = new mongoose.Schema<ReviewDocument>({
 export const ReviewModel =
   (mongoose.models.Review as Model<ReviewDocument>) ||
   mongoose.model<ReviewDocument>("Review", ReviewSchema, "reviews");
-
-ReviewSchema.index({
-  url: "text",
-  name: "text",
-});

@@ -90,15 +90,17 @@ export const SiteModel =
   (mongoose.models.sites as Model<SiteDocument>) ||
   mongoose.model<SiteDocument>("sites", SiteSchema, "sites");
 
-SiteSchema.index({
-  url: "text",
-  name: "text",
-  desceription: "text",
-  categories: "text",
-  features: "text",
-  usecases: "text",
-  users: "text",
-  relatedSearchs: "text",
-});
+export const ensureSiteIndexes = async () => {
+  SiteSchema.index({
+    url: "text",
+    name: "text",
+    desceription: "text",
+    categories: "text",
+    features: "text",
+    usecases: "text",
+    users: "text",
+    relatedSearchs: "text",
+  });
 
-SiteModel.ensureIndexes();
+  await SiteModel.ensureIndexes();
+};
