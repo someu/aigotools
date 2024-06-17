@@ -225,7 +225,7 @@ export async function getLatestSites(size = 12) {
     const sites = await SiteModel.find({
       state: SiteState.published,
     })
-      .sort({ createdAt: -1 })
+      .sort({ updatedAt: -1 })
       .limit(size)
       .populate("categories");
 
@@ -731,7 +731,10 @@ export async function getFeaturedCategories() {
 export async function getAllCategories() {
   try {
     await dbConnect();
-    const categories = await CategoryModel.find({}).sort({ name: 1 });
+    const categories = await CategoryModel.find({}).sort({
+      weight: 1,
+      name: 1,
+    });
 
     const plainCategories = categories.map(categoryToObject);
 
