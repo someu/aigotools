@@ -1,32 +1,47 @@
-# AigoTools
 
-AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自动收录功能，同时提供国际化、SEO、图片存储等功能。让用户可以快速部署上线自己的导航站。
+<br />
+<div align="center">
+  <a href="https://github.com/someu/aigotools.git">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+  <h2 align="center">AigoTools</h2>
+</div>
+
+
+AigoTools 可以帮助用户快速创建和管理导航站点，内置站点管理和自动收录功能，同时提供国际化、SEO、多种图片存储方案。让用户可以快速部署上线自己的导航站。
+
+点击访问：<a href="https://www.aigotools.com/cn">www.aigotools.com</a>
+
+
+![AigoTools User](./images/home.zh.jpg)
+![AigoTools Manager](./images/manage.jpg)
+
 
 
 ## 目录
 
-- [AigoTools](#aigotools)
-  - [目录](#目录)
-  - [功能](#功能)
-  - [部署](#部署)
-    - [前置准备](#前置准备)
-    - [本地部署](#本地部署)
-    - [托管服务部署](#托管服务部署)
-  - [开发](#开发)
-  - [维护者](#维护者)
-  - [如何贡献](#如何贡献)
-  - [联系我们](#联系我们)
-  - [使用许可](#使用许可)
+- [目录](#目录)
+- [功能](#功能)
+- [部署](#部署)
+  - [前置准备](#前置准备)
+  - [本地部署](#本地部署)
+  - [托管服务部署](#托管服务部署)
+- [开发](#开发)
+- [维护者](#维护者)
+- [如何贡献](#如何贡献)
+- [联系我们](#联系我们)
+- [使用许可](#使用许可)
 
 
 ## 功能
 
 - **站点管理**
-- **站点信息自动收录**
-- **用户登录功能（基于clerk）**
+- **站点信息自动采集（playwright、jina、openai）**
+- **用户管理（clerk）**
 - **国际化**
+- **暗色/亮色主题切换**
 - **SEO 优化**
-- **多种图片存储方式（本地minio、aws s3、腾讯云cos）**
+- **多种图片存储方案（本地minio、aws s3、腾讯云cos）**
 
 
 
@@ -38,7 +53,7 @@ AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自�
 
 - 前往 https://clerk.com/ 创建 application，并添加一个用户作为登录管理后台的管理员。
 - 申请好`OpenAI apiKey`和`jina apiKey`，它们会在收录网站时使用
-- 如果是托管服务部署，请部署好mongodb、redis数据库
+- 部署好mongodb、redis数据库
 
 ### 本地部署
 
@@ -73,7 +88,7 @@ AigoTools 可以帮助用户快速创建和管理导航站点，内置站点自�
 
 参考文档：[zeabur-deploy.md](./docs/zeabur-deploy.md)
 
-DEMO链接：https://aigotools.zeabur.app/
+Zeabur demo链接：https://aigotools.zeabur.app/
 
 
 ## 开发
