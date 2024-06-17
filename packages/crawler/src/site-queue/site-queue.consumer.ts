@@ -280,7 +280,13 @@ export class SiteConsumer {
       site.usecases = _.get(summaried, 'usecases', site.usecases);
       site.pricingType = _.get(summaried, 'pricingType', site.pricingType);
       site.pricings = _.get(summaried, 'pricings', site.pricings);
-      site.links = _.get(summaried, 'links', site.links) || {};
+      const links = _.get(summaried, 'links', site.links) || {};
+      for (const key in site.links) {
+        if (!key.startsWith('http')) {
+          delete site.links;
+        }
+      }
+      site.links = links;
       site.metaKeywords = keywords.length
         ? keywords
         : _.get(summaried, 'keywords', site.metaKeywords);
