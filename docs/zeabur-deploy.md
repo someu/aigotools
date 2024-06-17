@@ -16,6 +16,7 @@
 5. 配置aigotools-main服务的网络，生成一个域名，这个域名是AigoTools服务的域名，也可以自定一个域名。
 6. 配置aigotools-crawler的环境变量：
    ```
+    PORT=13000
     IMAGE_STORAGE=minio
     REDIS_HOST=redis.zeabur.internal
     REDIS_PORT=6379
