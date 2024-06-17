@@ -29,7 +29,7 @@ export default clerkMiddleware(
 
     const nextPathname = req.nextUrl.pathname;
 
-    if (/^\/(api|trpc)/.test(nextPathname)) {
+    if (/^\/(api|trpc|sitemap)/.test(nextPathname)) {
       return;
     }
 
