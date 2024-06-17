@@ -1,0 +1,1822 @@
+[{
+  "_id": {
+    "$oid": "666fcdf964e0911dd742462a"
+  },
+  "icon": "📊",
+  "name": "Data Related",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd742462b"
+  },
+  "icon": "💻",
+  "name": "Code and Development",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd742462c"
+  },
+  "icon": "✍️",
+  "name": "Content Creation",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd742462d"
+  },
+  "icon": "🤖",
+  "name": "Automation and AI",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd742462e"
+  },
+  "icon": "💼",
+  "name": "Business and Marketing",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd742462f"
+  },
+  "icon": "👥",
+  "name": "Human Resources and Legal",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424630"
+  },
+  "icon": "🎓",
+  "name": "Education and Learning",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424631"
+  },
+  "icon": "🎨",
+  "name": "Design and Creativity",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424632"
+  },
+  "icon": "💰",
+  "name": "Finance and Investment",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424633"
+  },
+  "icon": "🌿",
+  "name": "Lifestyle and Health",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424634"
+  },
+  "icon": "🔒",
+  "name": "Security and Privacy",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424635"
+  },
+  "icon": "🤝",
+  "name": "Team Collaboration and Productivity",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424636"
+  },
+  "icon": "🎉",
+  "name": "Entertainment and Fun",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424637"
+  },
+  "icon": "☎️",
+  "name": "Customer Support",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424638"
+  },
+  "icon": "📋",
+  "name": "Job Search and Recruitment",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcdf964e0911dd7424639"
+  },
+  "icon": "📱",
+  "name": "Social Media",
+  "parent": null,
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742463a"
+  },
+  "icon": "🔍",
+  "name": "Data extraction",
+  "parent": "666fcdf964e0911dd742462a",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742463b"
+  },
+  "icon": "📈",
+  "name": "Data analysis",
+  "parent": "666fcdf964e0911dd742462a",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742463c"
+  },
+  "icon": "📑",
+  "name": "Spreadsheets",
+  "parent": "666fcdf964e0911dd742462a",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742463d"
+  },
+  "icon": "💾",
+  "name": "Databases",
+  "parent": "666fcdf964e0911dd742462a",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742463e"
+  },
+  "icon": "🔢",
+  "name": "Data Generator",
+  "parent": "666fcdf964e0911dd742462a",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742463f"
+  },
+  "icon": "👨‍💻",
+  "name": "Code assistant",
+  "parent": "666fcdf964e0911dd742462b",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424640"
+  },
+  "icon": "🛠️",
+  "name": "Developer tools",
+  "parent": "666fcdf964e0911dd742462b",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424641"
+  },
+  "icon": "🧩",
+  "name": "No-code",
+  "parent": "666fcdf964e0911dd742462b",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424642"
+  },
+  "icon": "🔗",
+  "name": "API management",
+  "parent": "666fcdf964e0911dd742462b",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424643"
+  },
+  "icon": "🖥️",
+  "name": "IDE",
+  "parent": "666fcdf964e0911dd742462b",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424644"
+  },
+  "icon": "📝",
+  "name": "Content creation",
+  "parent": "666fcdf964e0911dd742462c",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424645"
+  },
+  "icon": "📰",
+  "name": "Article writer",
+  "parent": {
+    "$oid": "666fcdf964e0911dd742462c"
+  },
+  "featured": true,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603918564"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424646"
+  },
+  "icon": "📚",
+  "name": "Book writer",
+  "parent": "666fcdf964e0911dd742462c",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424647"
+  },
+  "icon": "🎥",
+  "name": "Video generation",
+  "parent": {
+    "$oid": "666fcdf964e0911dd742462c"
+  },
+  "featured": true,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603936126"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424648"
+  },
+  "icon": "🎬",
+  "name": "Video editing",
+  "parent": "666fcdf964e0911dd742462c",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424649"
+  },
+  "icon": "🖌️",
+  "name": "Image Generation",
+  "parent": {
+    "$oid": "666fcdf964e0911dd742462c"
+  },
+  "featured": true,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603948771"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742464a"
+  },
+  "icon": "🎨",
+  "name": "Art Generation",
+  "parent": "666fcdf964e0911dd742462c",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742464b"
+  },
+  "icon": "🧠",
+  "name": "AI Assistant",
+  "parent": {
+    "$oid": "666fcdf964e0911dd742462d"
+  },
+  "featured": true,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603963433"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742464c"
+  },
+  "icon": "🔄",
+  "name": "Automation",
+  "parent": "666fcdf964e0911dd742462d",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742464d"
+  },
+  "icon": "👾",
+  "name": "AI Characters",
+  "parent": {
+    "$oid": "666fcdf964e0911dd742462d"
+  },
+  "featured": true,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603987751"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742464e"
+  },
+  "icon": "🕵️",
+  "name": "AI detection",
+  "parent": "666fcdf964e0911dd742462d",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742464f"
+  },
+  "icon": "🔬",
+  "name": "AI Agents",
+  "parent": "666fcdf964e0911dd742462d",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424650"
+  },
+  "icon": "🌐",
+  "name": "AI website builder",
+  "parent": "666fcdf964e0911dd742462d",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424651"
+  },
+  "icon": "📜",
+  "name": "Large Language Models (LLM)",
+  "parent": "666fcdf964e0911dd742462d",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424652"
+  },
+  "icon": "📊",
+  "name": "Business planning",
+  "parent": "666fcdf964e0911dd742462e",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424653"
+  },
+  "icon": "🏷️",
+  "name": "Branding",
+  "parent": "666fcdf964e0911dd742462e",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424654"
+  },
+  "icon": "🔍",
+  "name": "SEO",
+  "parent": {
+    "$oid": "666fcdf964e0911dd742462e"
+  },
+  "featured": true,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718604007183"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424655"
+  },
+  "icon": "📢",
+  "name": "Marketing",
+  "parent": "666fcdf964e0911dd742462e",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424656"
+  },
+  "icon": "💸",
+  "name": "Sales",
+  "parent": "666fcdf964e0911dd742462e",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424657"
+  },
+  "icon": "📣",
+  "name": "Advertising",
+  "parent": "666fcdf964e0911dd742462e",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424658"
+  },
+  "icon": "🛒",
+  "name": "E-commerce",
+  "parent": "666fcdf964e0911dd742462e",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424659"
+  },
+  "icon": "📋",
+  "name": "Human Resources",
+  "parent": "666fcdf964e0911dd742462f",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742465a"
+  },
+  "icon": "⚖️",
+  "name": "Legal",
+  "parent": "666fcdf964e0911dd742462f",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742465b"
+  },
+  "icon": "📝",
+  "name": "Contract management",
+  "parent": "666fcdf964e0911dd742462f",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742465c"
+  },
+  "icon": "✅",
+  "name": "Compliance",
+  "parent": "666fcdf964e0911dd742462f",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742465d"
+  },
+  "icon": "🎓",
+  "name": "Employee training",
+  "parent": "666fcdf964e0911dd742462f",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742465e"
+  },
+  "icon": "📚",
+  "name": "Study assistant",
+  "parent": {
+    "$oid": "666fcdf964e0911dd7424630"
+  },
+  "featured": true,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718604025258"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742465f"
+  },
+  "icon": "🖍️",
+  "name": "Education tools",
+  "parent": "666fcdf964e0911dd7424630",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424660"
+  },
+  "icon": "👩‍🏫",
+  "name": "Teacher assistant",
+  "parent": "666fcdf964e0911dd7424630",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424661"
+  },
+  "icon": "📋",
+  "name": "Course Generator",
+  "parent": "666fcdf964e0911dd7424630",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424662"
+  },
+  "icon": "📝",
+  "name": "Homework assistant",
+  "parent": "666fcdf964e0911dd7424630",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424663"
+  },
+  "icon": "🌐",
+  "name": "Language Learning",
+  "parent": "666fcdf964e0911dd7424630",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424664"
+  },
+  "icon": "💻",
+  "name": "Online courses",
+  "parent": "666fcdf964e0911dd7424630",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424665"
+  },
+  "icon": "🖌️",
+  "name": "Design tools",
+  "parent": "666fcdf964e0911dd7424631",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424666"
+  },
+  "icon": "🖼️",
+  "name": "Image Editing",
+  "parent": "666fcdf964e0911dd7424631",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424667"
+  },
+  "icon": "🛋️",
+  "name": "Interior design",
+  "parent": "666fcdf964e0911dd7424631",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424668"
+  },
+  "icon": "📏",
+  "name": "3D Design",
+  "parent": "666fcdf964e0911dd7424631",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424669"
+  },
+  "icon": "🎞️",
+  "name": "Animation",
+  "parent": "666fcdf964e0911dd7424631",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742466a"
+  },
+  "icon": "📉",
+  "name": "Investment management",
+  "parent": "666fcdf964e0911dd7424632",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742466b"
+  },
+  "icon": "💵",
+  "name": "Financial management",
+  "parent": "666fcdf964e0911dd7424632",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742466c"
+  },
+  "icon": "💳",
+  "name": "Personal finance",
+  "parent": "666fcdf964e0911dd7424632",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742466d"
+  },
+  "icon": "📊",
+  "name": "Budget management",
+  "parent": "666fcdf964e0911dd7424632",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742466e"
+  },
+  "icon": "🧾",
+  "name": "Tax management",
+  "parent": "666fcdf964e0911dd7424632",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742466f"
+  },
+  "icon": "🏡",
+  "name": "Life assistant",
+  "parent": "666fcdf964e0911dd7424633",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424670"
+  },
+  "icon": "🏥",
+  "name": "Health management",
+  "parent": "666fcdf964e0911dd7424633",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424671"
+  },
+  "icon": "🧳",
+  "name": "Travel planning",
+  "parent": "666fcdf964e0911dd7424633",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424672"
+  },
+  "icon": "🐶",
+  "name": "Pets",
+  "parent": "666fcdf964e0911dd7424633",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424673"
+  },
+  "icon": "🏆",
+  "name": "Self-improvement",
+  "parent": "666fcdf964e0911dd7424633",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424674"
+  },
+  "icon": "💪",
+  "name": "Fitness assistant",
+  "parent": "666fcdf964e0911dd7424633",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424675"
+  },
+  "icon": "🍎",
+  "name": "Nutrition and diet",
+  "parent": "666fcdf964e0911dd7424633",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424676"
+  },
+  "icon": "🛡️",
+  "name": "Security tools",
+  "parent": "666fcdf964e0911dd7424634",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424677"
+  },
+  "icon": "🕵️",
+  "name": "Privacy protection",
+  "parent": "666fcdf964e0911dd7424634",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424678"
+  },
+  "icon": "🆔",
+  "name": "Identity verification",
+  "parent": "666fcdf964e0911dd7424634",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424679"
+  },
+  "icon": "🔏",
+  "name": "Data encryption",
+  "parent": "666fcdf964e0911dd7424634",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742467a"
+  },
+  "icon": "🛠️",
+  "name": "Cybersecurity",
+  "parent": "666fcdf964e0911dd7424634",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742467b"
+  },
+  "icon": "👥",
+  "name": "Team Collaboration",
+  "parent": "666fcdf964e0911dd7424635",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742467c"
+  },
+  "icon": "📈",
+  "name": "Productivity tools",
+  "parent": "666fcdf964e0911dd7424635",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742467d"
+  },
+  "icon": "🗂️",
+  "name": "Task management",
+  "parent": "666fcdf964e0911dd7424635",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742467e"
+  },
+  "icon": "📅",
+  "name": "Meeting assistant",
+  "parent": "666fcdf964e0911dd7424635",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742467f"
+  },
+  "icon": "📋",
+  "name": "Project management",
+  "parent": "666fcdf964e0911dd7424635",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424680"
+  },
+  "icon": "📄",
+  "name": "Document assistant",
+  "parent": "666fcdf964e0911dd7424635",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424681"
+  },
+  "icon": "🗃️",
+  "name": "File management",
+  "parent": "666fcdf964e0911dd7424635",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424682"
+  },
+  "icon": "🗓️",
+  "name": "Scheduling assistant",
+  "parent": "666fcdf964e0911dd7424635",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424683"
+  },
+  "icon": "🔄",
+  "name": "Workflow automation",
+  "parent": "666fcdf964e0911dd7424635",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424684"
+  },
+  "icon": "🎮",
+  "name": "Gaming",
+  "parent": "666fcdf964e0911dd7424636",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424685"
+  },
+  "icon": "🎲",
+  "name": "Fun tools",
+  "parent": "666fcdf964e0911dd7424636",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424686"
+  },
+  "icon": "📖",
+  "name": "Stories",
+  "parent": "666fcdf964e0911dd7424636",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424687"
+  },
+  "icon": "📰",
+  "name": "News",
+  "parent": "666fcdf964e0911dd7424636",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424688"
+  },
+  "icon": "⚽",
+  "name": "Sports",
+  "parent": "666fcdf964e0911dd7424636",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424689"
+  },
+  "icon": "👗",
+  "name": "Fashion",
+  "parent": "666fcdf964e0911dd7424636",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742468a"
+  },
+  "icon": "🎙️",
+  "name": "Podcasting",
+  "parent": "666fcdf964e0911dd7424636",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742468b"
+  },
+  "icon": "📺",
+  "name": "Movies and TV",
+  "parent": "666fcdf964e0911dd7424636",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742468c"
+  },
+  "icon": "🛠️",
+  "name": "Customer support",
+  "parent": "666fcdf964e0911dd7424637",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742468d"
+  },
+  "icon": "📞",
+  "name": "Customer service",
+  "parent": "666fcdf964e0911dd7424637",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742468e"
+  },
+  "icon": "📝",
+  "name": "Feedback management",
+  "parent": "666fcdf964e0911dd7424637",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742468f"
+  },
+  "icon": "🎫",
+  "name": "Support ticketing",
+  "parent": "666fcdf964e0911dd7424637",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424690"
+  },
+  "icon": "💬",
+  "name": "Online chat",
+  "parent": "666fcdf964e0911dd7424637",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424691"
+  },
+  "icon": "🔍",
+  "name": "Job Search",
+  "parent": "666fcdf964e0911dd7424638",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424692"
+  },
+  "icon": "📝",
+  "name": "Resume enhancement",
+  "parent": "666fcdf964e0911dd7424638",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424693"
+  },
+  "icon": "🗂️",
+  "name": "Interview Preparation",
+  "parent": "666fcdf964e0911dd7424638",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424694"
+  },
+  "icon": "📋",
+  "name": "Recruitment management",
+  "parent": "666fcdf964e0911dd7424638",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424695"
+  },
+  "icon": "🗺️",
+  "name": "Career planning",
+  "parent": "666fcdf964e0911dd7424638",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424696"
+  },
+  "icon": "📢",
+  "name": "Social media",
+  "parent": "666fcdf964e0911dd7424639",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424697"
+  },
+  "icon": "📈",
+  "name": "Social media growth",
+  "parent": "666fcdf964e0911dd7424639",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424698"
+  },
+  "icon": "🛠️",
+  "name": "Social media management",
+  "parent": "666fcdf964e0911dd7424639",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd7424699"
+  },
+  "icon": "📊",
+  "name": "Social media analytics",
+  "parent": "666fcdf964e0911dd7424639",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+},
+{
+  "_id": {
+    "$oid": "666fcfe564e0911dd742469a"
+  },
+  "icon": "🗓️",
+  "name": "Content calendar",
+  "parent": "666fcdf964e0911dd7424639",
+  "featured": false,
+  "weight": 0,
+  "createdAt": {
+    "$numberLong": "1718603028418"
+  },
+  "updatedAt": {
+    "$numberLong": "1718603028418"
+  }
+}]

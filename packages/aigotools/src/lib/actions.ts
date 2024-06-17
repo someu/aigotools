@@ -687,7 +687,7 @@ export async function managerSearchCategories(data: CategorySearchForm) {
     }
     if (data.type === "top") {
       query.parent = null;
-    } else if (data.type == "second") {
+    } else if (data.type == "second" && !data.parent) {
       query.parent = { $exists: true };
     }
 
