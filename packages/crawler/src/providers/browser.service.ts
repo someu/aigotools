@@ -65,7 +65,15 @@ export class BrowserService {
   }
 
   public async screenshot(url: string, width = 1920, height = 1080) {
-    const browser = await this.browserPool.acquire();
+    const browser = await this.browserPool.acquire().catch((error) => {
+      try {
+        Logger.error(
+          `Acquire borwser error, ${this.browserPool.listeners.length}/${this.browserPool.getMaxListeners()}, ${error}`,
+        );
+      } catch {}
+
+      throw error;
+    });
 
     let page: Page;
     let destoryFlag = false;
