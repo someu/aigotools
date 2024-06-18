@@ -1,5 +1,3 @@
-import path from "path";
-
 import { MetadataRoute } from "next";
 
 import dbConnect from "@/lib/db-connect";
@@ -91,7 +89,7 @@ export default async function sitemap({ id }: { id: number }) {
     sitemapRoutes.push(
       ...siteKeyObjs.map(({ siteKey }) => {
         return {
-          url: `/s/${siteKey}`,
+          url: `s/${siteKey}`,
           lastModified: new Date(),
           changeFrequency: "monthly" as const,
           priority: 0.9,
@@ -104,7 +102,7 @@ export default async function sitemap({ id }: { id: number }) {
     AvailableLocales.map((locale) => {
       return {
         ...route,
-        url: path.join(AppConfig.siteUrl, locale, route.url),
+        url: [AppConfig.siteUrl, locale, route.url].filter(Boolean).join("/"),
       };
     })
   );
