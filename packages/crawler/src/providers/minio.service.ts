@@ -8,10 +8,8 @@ export class MinioService {
   private minioClient: Client;
   private bucket: string;
   constructor(private configService: ConfigService) {
-    const endPoint = configService.get('MINIO_ENDPOINT', '');
-    const port = parseInt(configService.get('MINIO_PORT'), 10);
     this.bucket = configService.get('MINIO_BUCKET', '');
-    if (endPoint && port && this.bucket) {
+    if (configService.get('IMAGE_STORAGE') === 'minio') {
       this.minioClient = new Client({
         endPoint: configService.get('MINIO_ENDPOINT', ''),
         port: parseInt(configService.get('MINIO_PORT'), 10),
