@@ -6,7 +6,7 @@ import { SiteState } from "@/lib/constants";
 import { AvailableLocales } from "@/lib/locales";
 import { AppConfig } from "@/lib/config";
 
-const perSitemapCount = 1000;
+const perSitemapCount = 2000;
 
 export async function generateSitemaps() {
   await dbConnect();
@@ -76,7 +76,7 @@ export default async function sitemap({ id }: { id: number }) {
         $skip: id * perSitemapCount,
       },
       {
-        $limit: (id + 1) * perSitemapCount,
+        $limit: perSitemapCount,
       },
       {
         $project: {
