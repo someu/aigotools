@@ -61,30 +61,21 @@ export default async function sitemap({ id }: { id: number }) {
     // sites page site map
     await dbConnect();
 
-    const siteKeyObjs = await SiteModel.aggregate([
+    const siteKeyObjs = await SiteModel.find(
       {
-        $match: {
-          state: SiteState.published,
-        },
+        state: SiteState.published,
       },
+
       {
-        $sort: {
-          createdAt: 1,
-        },
-      },
-      {
-        $skip: id * perSitemapCount,
-      },
-      {
-        $limit: perSitemapCount,
-      },
-      {
-        $project: {
-          _id: 0,
-          siteKey: 1,
-        },
-      },
-    ]);
+        _id: 0,
+        siteKey: 1,
+      }
+    )
+      .skip(id * perSitemapCount)
+      .limit(perSitemapCount)
+      .lean();
+
+    console.log(siteKeyObjs.length);
 
     sitemapRoutes.push(
       ...siteKeyObjs.map(({ siteKey }) => {
