@@ -61,6 +61,7 @@ export default function SitesTable() {
 
   const {
     isLoading: loading,
+    isRefetching,
     data: searchResult = defaultData,
     refetch: handleSearch,
   } = useQuery({
@@ -77,6 +78,11 @@ export default function SitesTable() {
       return false;
     },
     refetchInterval: 5000,
+    placeholderData: (pdata) => {
+      console.log(pdata);
+
+      return pdata;
+    },
   });
 
   const { data: categories } = useQuery({
@@ -93,45 +99,57 @@ export default function SitesTable() {
     initialData: [],
   });
 
-  const stopAllSite = useCallback(
-    async (e: any) => {
-      try {
-        const params = { ...searchParams } as Omit<
-          SearchParams,
-          "page" | "size"
-        >;
+  const stopAllSite = useCallback(async () => {
+    toast.promise(
+      async () => {
+        try {
+          const params = { ...searchParams } as Omit<
+            SearchParams,
+            "page" | "size"
+          >;
 
-        delete (params as any).page;
-        delete (params as any).size;
-        await stopAllSitesCrawl(params);
-        await handleSearch();
-      } catch (error) {
-        console.log(error);
-        toast(t("stopFailed"));
+          delete (params as any).page;
+          delete (params as any).size;
+          await stopAllSitesCrawl(params);
+          await handleSearch();
+        } catch (error) {
+          console.log(error);
+          throw error;
+        }
+      },
+      {
+        pending: t("processing"),
+        success: t("success"),
+        error: t("fail"),
       }
-    },
-    [handleSearch, searchParams, t]
-  );
+    );
+  }, [handleSearch, searchParams, t]);
 
-  const dispatchAllSite = useCallback(
-    async (e: any) => {
-      try {
-        const params = { ...searchParams } as Omit<
-          SearchParams,
-          "page" | "size"
-        >;
+  const dispatchAllSite = useCallback(async () => {
+    toast.promise(
+      async () => {
+        try {
+          const params = { ...searchParams } as Omit<
+            SearchParams,
+            "page" | "size"
+          >;
 
-        delete (params as any).page;
-        delete (params as any).size;
-        await dispatchAllSitesCrawl(params);
-        await handleSearch();
-      } catch (error) {
-        console.log(error);
-        toast(t("dispatchFailed"));
+          delete (params as any).page;
+          delete (params as any).size;
+          await dispatchAllSitesCrawl(params);
+          await handleSearch();
+        } catch (error) {
+          console.log(error);
+          throw error;
+        }
+      },
+      {
+        pending: t("processing"),
+        success: t("success"),
+        error: t("fail"),
       }
-    },
-    [handleSearch, searchParams, t]
-  );
+    );
+  }, [handleSearch, searchParams, t]);
 
   return (
     <div className="mt-4 relative py-4">
@@ -164,6 +182,7 @@ export default function SitesTable() {
           </DropdownMenu>
         </Dropdown>
         <div className="flex-1" />
+        {loading || isRefetching ? <Spinner size="sm" /> : null}
         <Select
           className="w-48"
           placeholder={t("category")}

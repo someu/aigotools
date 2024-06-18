@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { ProcessStage, Site } from './schemas/site.schema';
 import { FilterQuery, Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
@@ -36,23 +36,27 @@ export class AppService {
 
   async batchDispatchSiteCrawl(params: BatchParams) {
     const query = this.generateBatchQuery(params);
-    await this.siteModel.updateMany(query, {
-      $set: { processStage: ProcessStage.processing },
-    });
+
     const siteIds = (await this.siteModel.distinct('_id', query)).map((id) =>
       id.toString(),
     );
     await this.siteQueueProducer.batchAddCrawlJobs(siteIds);
+    Logger.log(`Batch dispatch ${siteIds.length} sites crawl`);
+
+    await this.siteModel.updateMany(query, {
+      $set: { processStage: ProcessStage.processing },
+    });
   }
 
   async batchStopSiteCrawl(params: BatchParams) {
     const query = this.generateBatchQuery(params);
-    await this.siteModel.updateMany(query, {
-      $set: { processStage: ProcessStage.pending },
-    });
     const siteIds = (await this.siteModel.distinct('_id', query)).map((id) =>
       id.toString(),
     );
     await this.siteQueueProducer.batchStopCrawlJob(siteIds);
+    Logger.log(`Batch stop ${siteIds.length} sites crawl`);
+    await this.siteModel.updateMany(query, {
+      $set: { processStage: ProcessStage.pending },
+    });
   }
 }

@@ -23,7 +23,6 @@ import LinksInput from "./links-input";
 import { Site } from "@/models/site";
 import ArrowInput from "@/components/common/arrow-input";
 import SingleImageUpload from "@/components/common/single-image-upload";
-import MultiImageUpload from "@/components/common/multi-image-upload";
 import { managerSearchCategories, saveSite } from "@/lib/actions";
 
 export default function SiteEdit({
@@ -210,13 +209,13 @@ export default function SiteEdit({
                 setValue("snapshot", value);
               }}
             />
-            <MultiImageUpload
+            {/* <MultiImageUpload
               label={t("images")}
               value={formValues.images}
               onChange={(value) => {
                 setValue("images", value);
               }}
-            />
+            /> */}
 
             <Textarea
               label={t("desceription")}

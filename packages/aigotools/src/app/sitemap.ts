@@ -75,8 +75,6 @@ export default async function sitemap({ id }: { id: number }) {
       .limit(perSitemapCount)
       .lean();
 
-    console.log(siteKeyObjs.length);
-
     sitemapRoutes.push(
       ...siteKeyObjs.map(({ siteKey }) => {
         return {
