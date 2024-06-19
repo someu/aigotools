@@ -25,6 +25,7 @@ Visit here: <a href="https://www.aigotools.com/cn">www.aigotools.com</a>
   - [Local Deployment](#local-deployment)
   - [Hosting Service Deployment](#hosting-service-deployment)
 - [Development](#development)
+- [Figma Resource](#figma-resource)
 - [Maintainers](#maintainers)
 - [How to Contribute](#how-to-contribute)
 - [Contact Us](#contact-us)
@@ -114,6 +115,15 @@ Zeabur demo link: https://aigotools.zeabur.app/
    ```bash
    pnpm run dev
    ```
+
+## Figma Resource
+
+We have also open-sourced the design drafts for this project. Feel free to use the UI and code from this project to develop your own website.
+
+https://www.figma.com/community/file/1385200592630492334/aigotools
+
+![AigoTools Figma](./images/figma-preview.jpg)
+
 
 ## Maintainers
 
