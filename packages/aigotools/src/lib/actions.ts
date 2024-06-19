@@ -92,14 +92,16 @@ export async function searchSites({
       query.categories = (await CategoryModel.findOne({ name: category }))?._id;
     }
 
-    const regFindSites = await SiteModel.find({
-      $or: [
-        { name: { $regex: search, $options: "i" } },
-        { siteKey: { $regex: search, $options: "i" } },
-      ],
-    })
-      .sort({ weight: -1, updatedAt: -1 })
-      .limit(12);
+    const regFindSites = search
+      ? await SiteModel.find({
+          $or: [
+            { name: { $regex: search, $options: "i" } },
+            { siteKey: { $regex: search, $options: "i" } },
+          ],
+        })
+          .sort({ weight: -1, updatedAt: -1 })
+          .limit(12)
+      : [];
 
     query._id = { $nin: [] };
 
