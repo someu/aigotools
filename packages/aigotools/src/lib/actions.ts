@@ -98,6 +98,7 @@ export async function searchSites({
             { name: { $regex: search, $options: "i" } },
             { siteKey: { $regex: search, $options: "i" } },
           ],
+          state: SiteState.published,
         })
           .sort({ weight: -1, updatedAt: -1 })
           .limit(12)
