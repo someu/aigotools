@@ -15,10 +15,8 @@ AigoTools 可以帮助用户快速创建和管理导航站点，内置站点管�
 
 点击访问：<a href="https://www.aigotools.com/cn">www.aigotools.com</a>
 
-<video width="100%" controls>
-  <source src="https://image.aigotools.com/aigotools-preview.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/someu/aigotools/assets/33251742/00d39041-a216-4105-884b-bd19cde6c706
+
 
 ## 目录
 
