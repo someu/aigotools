@@ -14,7 +14,10 @@ AigoTools helps users quickly create and manage navigation sites with built-in s
 
 Visit here: <a href="https://www.aigotools.com/cn">www.aigotools.com</a>
 
-https://image.aigotools.com/aigotools-preview.mp4
+<video width="100%" controls>
+  <source src="https://image.aigotools.com/aigotools-preview.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Table of Contents
 
