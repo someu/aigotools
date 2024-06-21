@@ -14,7 +14,7 @@ AigoTools helps users quickly create and manage navigation sites with built-in s
 
 Visit here: <a href="https://www.aigotools.com/cn">www.aigotools.com</a>
 
-[![AigoTools Preview](./assets/aigotools-preview-cover.jpg)](./assets/aigotools-preview.mp4)
+[![AigoTools Preview](./assets/aigotools-preview-cover.jpg)](https://image.aigotools.com/aigotools-preview.mp4)
 
 ## Table of Contents
 
