@@ -148,6 +148,9 @@ https://www.figma.com/community/file/1385200592630492334/aigotools
 - GitHub Issues: [提交问题](https://github.com/someu/aigotools/issues)
 - 电子邮件: someuxyz@gmail.com
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=someu/aigotools&type=Date)](https://star-history.com/#someu/aigotools&Date)
 
 ## 使用许可
 
