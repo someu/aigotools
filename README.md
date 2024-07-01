@@ -141,6 +141,11 @@ For any questions or suggestions, please contact us via:
 - GitHub Issues: [Submit Issues](https://github.com/someu/aigotools/issues)
 - Email: someuxyz@gmail.com
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=someu/aigotools&type=Date)](https://star-history.com/#someu/aigotools&Date)
+
+
 ## License
 
 AigoTools is licensed under the Apache License 2.0. For more details, see the [LICENSE](./LICENSE) file.
