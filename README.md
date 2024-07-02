@@ -10,7 +10,7 @@
   <br>
 </div>
 
-AigoTools helps users quickly create and manage navigation sites with built-in site management and automatic inclusion features. It also offers internationalization, SEO, and multiple image storage solutions, enabling users to quickly deploy and launch their own navigation site.
+AigoTools helps users quickly create and manage website directory with built-in site management and automatic inclusion features. It also offers internationalization, SEO, and multiple image storage solutions, enabling users to quickly deploy and launch their own navigation site.
 
 Visit here: <a href="https://www.aigotools.com/cn">www.aigotools.com</a>
 
