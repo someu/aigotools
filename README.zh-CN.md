@@ -6,6 +6,9 @@
   <a href="README.md">
     Englihs
   </a>
+  <a href="README.ja-JP.md">
+    日本語
+  </a>
   <br>
   <br>
 </div>
