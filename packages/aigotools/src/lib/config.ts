@@ -42,6 +42,10 @@ export const AppConfig = {
   crawlerAuthUser: (process.env.CRAWLER_AUTH_USER as string) || "",
   crawlerAuthPassword: (process.env.CRAWLER_AUTH_PASSWORD as string) || "",
 
+  // google analytics
+  googleAnalyticsID:
+    (process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string) || "",
+
   get crawlerAuthToken() {
     return Buffer.from(
       `${this.crawlerAuthUser}:${this.crawlerAuthPassword}`,
