@@ -4,8 +4,9 @@
   </a>
   <h2 align="center">AigoTools</h2>
   <a href="README.md">
-    Englihs
+    English
   </a>
+  |
   <a href="README.ja-JP.md">
     日本語
   </a>
@@ -34,6 +35,7 @@ https://github.com/someu/aigotools/assets/33251742/00d39041-a216-4105-884b-bd19c
 - [维护者](#维护者)
 - [如何贡献](#如何贡献)
 - [联系我们](#联系我们)
+- [🌟 Star History](#-star-history)
 - [使用许可](#使用许可)
 
 

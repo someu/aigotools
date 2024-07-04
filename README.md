@@ -6,6 +6,7 @@
   <a href="README.zh-CN.md">
     简体中文
   </a>
+  |
   <a href="README.ja-JP.md">
     日本語
   </a>
@@ -33,6 +34,7 @@ https://github.com/someu/aigotools/assets/33251742/00d39041-a216-4105-884b-bd19c
 - [Maintainers](#maintainers)
 - [How to Contribute](#how-to-contribute)
 - [Contact Us](#contact-us)
+- [🌟 Star History](#-star-history)
 - [License](#license)
 
 ## Features
